@@ -28,7 +28,7 @@ bibliography: references.bib
 
 Example: Effect of sugar on brownie tastiness. -->
 ```
-`r rmarkdown::metadata$title` Effect of wolves on moose presence and abundance in central Sweden.
+`r rmarkdown::metadata$title` The effects of wolves on moose presence and abundance in central Sweden.
 
 ## Description
 
@@ -78,6 +78,8 @@ This question has a variety of possible answers. The key is for a researcher to 
 Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
 ```
 Enter your response here.
+
+*Our proposed study maybe could be classified as two-group, between-subjects study with repeated measures? I.e. plots where wolves are established and plots where wolves are not established are observed (via moose pellet counts) over time?* Unsure on this..
 
 # Sampling Plan
 
