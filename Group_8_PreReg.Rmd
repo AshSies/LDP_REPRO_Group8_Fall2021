@@ -28,7 +28,7 @@ bibliography: references.bib
 
 Example: Effect of sugar on brownie tastiness. -->
 ```
-`r rmarkdown::metadata$title`
+`r rmarkdown::metadata$title` Effect of wolves on moose presence and abundance in central Sweden.
 
 ## Description
 
@@ -37,7 +37,15 @@ Example: Effect of sugar on brownie tastiness. -->
 
 Example: Though there is strong evidence to suggest that sugar affects taste preferences, the effect has never been demonstrated in brownies. Therefore, we will measure taste preference for four different levels of sugar concentration in a standard brownie recipe to determine if the effect exists in this pastry. -->
 ```
-Enter your response here.
+Predator-prey interactions often have strong effects on the lower trophic levels in a given environment. For example, upon the re-establishment of wolves in a national park in North America, aspen trees saw markedly increased recruitment [@ripple2014]. Apex predator reintroduction is often considered to benefit ecosystems by limiting the consumption of lower trophic levels by grazers, and by providing meals for scavengers [@ripple2004].
+
+However, most research on the effects of predator reintroduction has been conducted in natural areas minimally affected by human activities [@kuijper2016]. Due to climate-driven relocation and controlled reintroduction programs, modern and future predator populations may become established in areas of strong anthropogenic influence. Thus, when predicting future effects of predators, it is important to conduct research in areas with nearby human activity, to discern how it may affect predator-prey interactions [@kuijper2016].
+
+Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. 
+
+By surveying moose pellets, @auilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021]. 
+
+Future populations of predators will continue to establish themselves in areas of anthropogenic influence. It is important to critically investigate the effects that they may, or may not, have on prey populations and lower trophic levels in these areas. To increase certainty in their paradigm-questioning results, we will replicate @ausilio2021's research, conducting parallel analyses on areas that are just north of the original study area.
 
 ## Hypotheses
 
@@ -46,7 +54,11 @@ Enter your response here.
 
 Example: If taste affects preference, then mean preference indices will be higher with higher concentrations of sugar. -->
 ```
-Enter your response here.
+We hypothesize that:
+
+1) Wolf presence and wolf territory establishment will moderately increase the probability of moose presence, and overall moose abundance. 
+
+2) 'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or wolf territory establishment. 
 
 # Design Plan
 
