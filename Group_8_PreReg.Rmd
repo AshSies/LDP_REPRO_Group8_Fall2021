@@ -41,9 +41,9 @@ Predator-prey interactions often have strong effects on the lower trophic levels
 
 However, most research on the effects of predator reintroduction has been conducted in natural areas minimally affected by human activities [@kuijper2016]. Due to climate-driven relocation and controlled reintroduction programs, modern and future predator populations may become established in areas of strong anthropogenic influence. Thus, when predicting future effects of predators, it is important to conduct research in areas with nearby human activity, to discern how it may affect predator-prey interactions [@kuijper2016].
 
-Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. 
+Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021.
 
-By surveying moose pellets, @auilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021]. 
+By surveying moose pellets, @auilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021].
 
 Future populations of predators will continue to establish themselves in areas of anthropogenic influence. It is important to critically investigate the effects that they may, or may not, have on prey populations and lower trophic levels in these areas. To increase certainty in their paradigm-questioning results, we will replicate @ausilio2021's research, conducting parallel analyses on areas that are just north of the original study area.
 
@@ -56,9 +56,9 @@ Example: If taste affects preference, then mean preference indices will be highe
 ```
 We hypothesize that:
 
-1) Wolf presence and wolf territory establishment will moderately increase the probability of moose presence, and overall moose abundance. 
+1)  Wolf presence and wolf territory establishment will moderately increase the probability of moose presence, and overall moose abundance.
 
-2) 'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or wolf territory establishment. 
+2)  'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or wolf territory establishment.
 
 # Design Plan
 
@@ -81,91 +81,26 @@ Enter your response here.
 
 *Our proposed study maybe could be classified as two-group, between-subjects study with repeated measures? I.e. plots where wolves are established and plots where wolves are not established are observed (via moose pellet counts) over time?* Unsure on this..
 
-# Sampling Plan
+## Data collection
 
-<!-- In this section we’ll ask you to describe how you plan to collect samples, as well as the number of samples you plan to collect and your rationale for this decision. Please keep in mind that the data described in this section should be the actual data used for analysis, so if you are using a subset of a larger dataset, please describe the subset that will actually be used in your study. -->
-
-## Existing data
-
-<!-- Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. Please do not hesitate to contact us if you have questions about how to answer this question (prereg@cos.io). -->
-
-**Registration prior to accessing the data**. As of the date of submission, the data exist, but have not been accessed by you or your collaborators. Commonly, this includes data that has been collected by another researcher or institution.
-
-## Explanation of existing data
-
-```{=html}
-<!-- If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.
-
-An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point.
-
-Example: An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the dataset that had not been investigated by the researcher up to that point. -->
-```
-Enter your response here.
-
-## Data collection procedures
-
-```{=html}
-<!-- Please describe the process by which you will collect your data. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool (e.g. inclusion and exclusion rules), and your study timeline. For studies that donÍt include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
-
-The answer to this question requires a specific set of instructions so that another person could repeat the data collection procedures and recreate the study population. Alternatively, if the study population would be unable to be reproduced because it relies on a specific set of circumstances unlikely to be recreated (e.g., a community of people from a specific time and location), the criteria and methods for creating the group and the rationale for this unique set of subjects should be clear.
-
-Example: Participants will be recruited through advertisements at local pastry shops. Participants will be paid $10 for agreeing to participate (raised to $30 if our sample size is not reached within 15 days of beginning recruitment). Participants must be at least 18 years old and be able to eat the ingredients of the pastries. -->
-```
-Enter your response here.
-
-## Sample size
-
-```{=html}
-<!-- Describe the sample size of your study. How many units will be analyzed in the study? This could be the number of people, birds, classrooms, plots, interactions, or countries included. If the units are not individuals, then describe the size requirements for each unit. If you are using a clustered or multilevel design, how many units are you collecting at each level of the analysis? For some studies, this will simply be the number of samples or the number of clusters. For others, this could be an expected range, minimum, or maximum number.
-
-Example: Our target sample size is 280 participants. We will attempt to recruit up to 320, assuming that not all will complete the total task. -->
-```
-The study will be conducted within the region of south-central Sweden where wolves have established territories. The sample size will be determined by the data available for this region ( number of surveyed plots?).
-
-## Sample size rationale
-
-```{=html}
-<!-- This could include a power analysis or an arbitrary constraint such as time, money, or personnel. This gives you an opportunity to specifically state how the sample size will be determined. A wide range of possible answers is acceptable; remember that transparency is more important than principled justifications. If you state any reason for a sample size upfront, it is better than stating no reason and leaving the reader to "fill in the blanks." Acceptable rationales include: a power analysis, an arbitrary number of subjects, or a number based on time or monetary constraints.
-
-Example: We used the software program G*Power to conduct a power analysis. Our goal was to obtain .95 power to detect a medium effect size of .25 at the standard .05 alpha error probability. -->
-```
-Sampling size will be determined by the data available for the various variables used within our study region.
+The study will be conducted using data retrieved from various government and private sector institutions (Table 1) between 2003 and 2016, as is consistent with the original study by Ausilio et al. The study area will be the northern range of south-central Sweden's breeding range of wolves, distinct from the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
 
 # Variables
 
-<!-- In this section you can describe all variables (both manipulated and measured variables) that will later be used in your confirmatory analysis plan. In your analysis plan, you will have the opportunity to describe how each variable will be used. If you have variables which you are measuring for exploratory analyses, you are not required to list them, though you are permitted to do so. -->
+Variable data will be collected within the study area of south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible.
 
-## Measured variables
+Table 1. Description and data source of variables to be used in statistical analysis of the effect of wolves on the presence and abundance of moose.
 
-```{=html}
-<!-- Describe each variable that you will measure. This will include outcome measures, as well as any predictors or covariates that you will measure. You do not need to include any variables that you plan on collecting if they are not going to be included in the confirmatory analyses of this study.
-
-Observational studies and meta-analyses will include only measured variables. As with the previous questions, the answers here must be precise. For example, 'intelligence,' 'accuracy,' 'aggression,' and 'color' are too vague. Acceptable alternatives could be 'IQ as measured by Wechsler Adult Intelligence Scale' 'percent correct,' 'number of threat displays,' and 'percent reflectance at 400 nm.'
-
-Example: The single outcome variable will be the perceived tastiness of the single brownie each participant will eat. We will measure this by asking participants ‘How much did you enjoy eating the brownie’ (on a scale of 1-7, 1 being 'not at all', 7 being 'a great deal') and 'How good did the brownie taste' (on a scale of 1-7, 1 being 'very bad', 7 being 'very good'). -->
-```
-Moose pellet counts will be used to gather presence and absence data on moose. The Swedish National Forestry Inventory conducts yearly surveys between the months of May and September throughout south-central Sweden [@fridman2014]. There are four forest habitats in which surveys are conducted: clear-cut, young, thinned, and mature. During the study period, a total of \_\_\_\_ sample plots will be surveyed.
-
-Two variables will be used to determine the effect of wolves on moose presence: 1) wolf presence, and 2) time since wolf territory establishment. The data for these two variables will be retrieved from yearly surveys performed by the national wolf-monitoring system [@liberg2011].
-
-Distance to the nearest forest road (km) and distance to the nearest main road (km)
-
-Forest stage (4)
-
-## Indices
-
-```{=html}
-<!-- If any measurements are  going to be combined into an index (or even a mean), what measures will you use and how will they be combined? Include either a formula or a precise description of your method. If your are using a more complicated statistical method to combine measures (e.g. a factor analysis), you can note that here but describe the exact method in the analysis plan section.
-
-If you are using multiple pieces of data to construct a single variable, how will this occur? Both the data that are included and the formula or weights for each measure must be specified. Standard summary statistics, such as "means" do not require a formula, though more complicated indices require either the exact formula or, if it is an established index in the field, the index must be unambiguously defined. For example, "biodiversity index" is too broad, whereas "Shannon’s biodiversity index" is appropriate.
-
-Example: We will take the mean of the two questions above to create a single measure of 'brownie enjoyment.'  -->
-```
-Moose pellet counts, as previously described, will be used to calculate a relative index for moose abundance. \**how is the index calculated?*
-
-Pine proportion
-
-An index of food availability will be generated by summing the cover (m²) of tree species that are highly selected by moose. These species include: aspen, rowan, willow, and oak (RAWO). From this index, a categorical variable will be created denoting either presence of absence of RAWO species.
+|                                          |                                                                                                                                                                                                                                                      |                                                                          |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| **Variable**                             | **Description**                                                                                                                                                                                                                                      | **Data source**                                                          |
+| Moose pellet counts                      | Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014].                                                  | Swedish National Forestry Inventory                                      |
+| Forest age stage (4 categories)          | Moose pellet count surveys are conducted in 4 forest habitats: clear-cut, young, thinned, and mature.                                                                                                                                                | Swedish National Forestry Inventory                                      |
+| Pine proportion                          | Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability.  | Swedish National Forestry Inventory                                      |
+| Distance to the nearest forest road (km) | Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape.                                                                             | Swedish national road database from the Swedish Transport Administration |
+| Distance to the nearest main road (km)   | Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape.                                                                               | Swedish national road database from the Swedish Transport Administration |
+| Wolf presence                            | Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius was used based on the average wolf territory size in Scandinavia [@liberg2011]. | National wolf-monitoring system from County Administrative Boards        |
+| Time since wolf territory establishment  | A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys.                                                                                                                                              | National wolf-monitoring system from County Administrative Boards        |
 
 # Analysis Plan
 
