@@ -1,10 +1,14 @@
 # LDP_REPRO_Group8_Fall2021
-For collaboration and version control on our group task. 
 
-Ashton's test of repo/RStudio connection. :-)
+Living Data Project: Productivity and Reproducibility Module 
+September 2021
 
-Emma's test! 
+Reproducible Research Group Assignment - Option 1
 
-Jenna's test
+Group members: Ashton Sies, Sabrina St-Pierre, Jenna Scherger, and Emma Nikkel
 
-Sabrina's test number 3 (just to be sure)
+Documents available in R project:
+  - pre-registration .Rmd file 
+  - knitted PDF
+  - simulated data .csv files
+  - R script for simulated data generation and modeling
