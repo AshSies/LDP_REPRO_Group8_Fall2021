@@ -136,8 +136,6 @@ table(moose_untouched$Taxar)
 table(moose_simulated$Taxar)
 
 
-#Out put of what Sabrina had
-#write.csv(moose_simulated, "Moose_simulate")
 
 ##=================================================================================
 ##=================================================================================
