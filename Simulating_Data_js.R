@@ -185,20 +185,45 @@ hist(moose_untouched$Pellet.counts)
 hist(moose_simulated$Pellet.counts)
 
 
+## Pine proportion (zero-inflated negative binomial)
 
-## Pine proportion
-moose_simulated$Pine.proportion <- rnbinom(n = nrow(moose_simulated), mu=0.039826, size=0.52) 
+# Determinating pre-required variables for the function
 
-hist(moose_untouched$Pine_proportion)
-summary(moose_untouched$Pine_proportion)
-summary(moose_simulated$Pine.proportion)
-hist(moose_simulated$Pine.proportion)
-dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
+# zprob : probability of structural zeros
+pine_zprob <- sum(moose_untouched$Pine_proportion == 0)/nrow(moose_simulated)
 
-# Infos for Pine
-# Possibility to make a log transformation? : This could normalize the data and give it a normal distribution 
-# that can be easier to simulate.
-# Find a way to determine parameter size and zprob in rzinbinom.
+# mu : mean of the pine proportion
+pine_mu <- mean(moose_untouched$Pine_proportion)
+
+# size : overdispersion parameter
+  # First we need to find the variance
+  pine_var <- var(moose_untouched$Pine_proportion)
+
+  # We can find the size knowing that variance = (mu + mu^2)/size
+  # Then size = (mu + mu^2)/variance
+  pine_size <- (pine_mu + (pine_mu^2))/pine_var
+
+# Simulating the data with the variables established
+install.packages("emdbook")
+library(emdbook)  
+moose_simulated$Pine.proportion <- rzinbinom(n = nrow(moose_untouched$Pine_proportion), mu = pine_mu, size = pine_size, zprob = pine_zprob)
+# Error in runif(n) : arguments incorrects
+
+##==================================================================================
+
+# OLD TRIALS FOR PINE AND TIME SINCE ESTABLISHEMENT
+  #moose_simulated$Pine.proportion <- rnbinom(n = nrow(moose_simulated), mu=0.039826, size=0.52) 
+
+  #hist(moose_untouched$Pine_proportion)
+  #summary(moose_untouched$Pine_proportion)
+  #summary(moose_simulated$Pine.proportion)
+  #hist(moose_simulated$Pine.proportion)
+  #dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
+
+  # Infos for Pine
+  # Possibility to make a log transformation? : This could normalize the data and give it a normal distribution 
+  # that can be easier to simulate.
+  # Find a way to determine parameter size and zprob in rzinbinom.
 
 ##==================================================================================
 ##==================================================================================
