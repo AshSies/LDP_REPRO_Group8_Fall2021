@@ -189,15 +189,18 @@ hist(moose_simulated$Pellet.counts)
 
 # Determinating pre-required variables for the function
 
+# Adjusting the data (we have to confirm this part)
+moose_simulated$Pine.untouche.100 <- (moose_untouched$Pine_proportion)*100
+
 # zprob : probability of structural zeros
-pine_zprob <- sum(moose_untouched$Pine_proportion == 0)/nrow(moose_simulated)
+pine_zprob <- sum(moose_simulated$Pine.untouche.100 == 0)/nrow(moose_simulated)
 
 # mu : mean of the pine proportion
-pine_mu <- mean(moose_untouched$Pine_proportion)
+pine_mu <- mean(moose_simulated$Pine.untouche.100)
 
 # size : overdispersion parameter
   # First we need to find the variance
-  pine_var <- var(moose_untouched$Pine_proportion)
+  pine_var <- var(moose_simulated$Pine.untouche.100)
 
   # We can find the size knowing that variance = (mu + mu^2)/size
   # Then size = (mu + mu^2)/variance
@@ -206,8 +209,10 @@ pine_mu <- mean(moose_untouched$Pine_proportion)
 # Simulating the data with the variables established
 install.packages("emdbook")
 library(emdbook)  
-moose_simulated$Pine.proportion <- rzinbinom(n = nrow(moose_untouched$Pine_proportion), mu = pine_mu, size = pine_size, zprob = pine_zprob)
-# Error in runif(n) : arguments incorrects
+moose_simulated$Pine.proportion <- (rzinbinom(n = nrow(moose_untouched), mu = pine_mu, size = pine_size, zprob = pine_zprob))
+
+#Checking the data
+hist(moose_simulated$Pine.proportion)
 
 ##==================================================================================
 
