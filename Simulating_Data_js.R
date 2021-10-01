@@ -8,11 +8,11 @@
 # Read in packages ===============================================================================#
 library(readxl) # To import excel documents.
 library(tidyverse) # for wrangling data - using primarily dplyr, tidyr, purrr, maybe ggplot
+library(emdbook) # To simulate zero-inflated negative binomial distribution
 library(parallel) # for parallel processing when running model selection 
 library(glmmTMB) # for running model
 library(MuMIn) # for dredging
 library(sjPlot) # for marginal effects plots
-
 
 # Importing the raw data =========================================================================#
 # The data are available on a Dryad repository
@@ -20,183 +20,296 @@ library(sjPlot) # for marginal effects plots
 
 moose_raw <- readxl::read_excel("Raw_Data/Moose_presence_abundance.xlsx")
 
-# Defining the distribution of the raw data ======================================================#
-# To simulate adequately the data, we first need to determine how they are distributed.
-# To do so we will visualize the variables required to models the moose abundance.
+# Data frame for the simulation ===============================================================#
+
+# Creating empty data frame that will host the simulated data
+moose_simulated <- data.frame(matrix(0, ncol = 0, nrow = nrow(moose_raw)))
+
+# Simulating the data : TAXAR ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$Taxar, main = "Raw data: Taxar") 
+# Uniform distribution of dates
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+# The package purrr (available in tidyverse) is needed to simulate an uniform distribution of dates.
+moose_simulated$Taxar <- purrr::rdunif(n = nrow(moose_raw), min(moose_raw$Taxar), max(moose_raw$Taxar))
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Taxar, main = "Simulated data: Taxar")
+
+summary(moose_raw$Taxar) # Median = 2010; Mean = 2010 
+summary(moose_simulated$Taxar) # Median = 2009; Mean = 2009
+
+# Simulating the data : RASE PRESENCE ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`RASE presence`, main = "Raw data: RASE presence")
+# Binary (0 = absence; 1 = presence)
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# Defining the raw data ratio of the presence
+prob_rase <- sum(moose_raw$`RASE presence` == 1) / nrow(moose_raw)
+
+# Incorporating the variables
+moose_simulated$RASE_presence <- rbinom(n = nrow(moose_raw), 1, prob_rase)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$RASE_presence, main = "Simulated data: RASE presence")
+
+summary(moose_raw$`RASE presence`) # Median = 1.0000; Mean = 0.5219
+summary(moose_simulated$RASE_presence) # Meadian = 1.0000; Mean = 0.5213
+
+# Simulating the data : FOREST CLASS ===============================================================#
+
+# Defining the distribution of the raw data.
+hist(moose_raw$Forest_class, main = "Raw data: Forest Class") 
+# Categorical data
+
+# 2. setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# Defining the raw data ratio of the different categories
+prob_forest1 <- sum(moose_raw$Forest_class == 1)/nrow(moose_raw)
+prob_forest2 <- sum(moose_raw$Forest_class == 2)/nrow(moose_raw)
+prob_forest3 <- sum(moose_raw$Forest_class == 3)/nrow(moose_raw)
+prob_forest4 <- sum(moose_raw$Forest_class == 4)/nrow(moose_raw)
+
+# Incorporating the variables
+moose_simulated$Forest_class <- sample(c(1:4), size = nrow(moose_raw), replace = TRUE, 
+                                       prob = c(prob_forest1, prob_forest2, prob_forest3, prob_forest4))
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Forest_class, main = "Simulated data: Forest class")
+
+summary(moose_raw$Forest_class) # Median = 3.000; Mean = 2.993
+summary(moose_simulated$Forest_class) # Median = 3.000; Mean = 2.981
+
+# Simulating the data : MOOSE PRESENCE ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Moose presence`, main = "Raw data: Moose Presence") 
+# Binary (0 = absence; 1 = presence)
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# Defining the raw data ration of the presence
+prob_moose <- sum(moose_raw$`Moose presence` == 1) / nrow(moose_simulated)
+
+# Incorporating the variables
+moose_simulated$Moose_presence <- rbinom(n = nrow(moose_raw), 1, prob_moose)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Moose_presence, main = "Simulated data: Moose presence")
+
+summary(moose_raw$`Moose presence`) # Mean = 0.1184
+summary(moose_simulated$Moose_presence) # Mean = 0.1197
+
+# Simulating the data : WOLF TERRITORY ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Wolf territory`, main = "Raw data: Wolf Territory") 
+# Binary (0 = absence; 1 = presence)
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# Defining the raw data ratio of the presence
+prob_wolf <- sum(moose_raw$`Wolf territory` == 1) / nrow(moose_raw)
+
+# Incorporating the variables
+moose_simulated$Wolf_territory <- rbinom(n = nrow(moose_raw), 1, prob_wolf)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Wolf_territory, main = "Simulated data: Wolf territory")
+
+summary(moose_raw$`Wolf territory`) # Mean = 0.3789
+summary(moose_simulated$Wolf_territory) # Mean = 0.3836
 
 
+# Simulating the data : PINE PROPORTION ===============================================================#
 
-#To look at the distribution to determine how to simulate the data
-hist(moose_untouched$Taxar,
-    main = "Taxar")
-hist(moose_untouched$Forest_class,
-     main = "Forest Class") # 4 categorical turned continous (1, 2, 3, 4)
-hist(moose_untouched$Wolf.territory,
-     main = "Wolf Territory") # binary (0 = no; 1 = yes)
-hist(moose_untouched$Moose.presence,
-     main = "Moose Presence") # binary (0 = no; 1 = yes) -> lots of 0's
-hist(moose_untouched$Small.roads,
-     main = "Small Roads") 
-hist(moose_untouched$Big.roads,
-     main = "Big Roads")
-hist(moose_untouched$Pine_proportion,
-     main = "Pine Proportion")
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$Pine_proportion, main = "Raw data: Pine Proportion")
+# Zero-inflated negative binomial model
 
-# Sabrina : I looked through the script for abundance and I think we only need to simulate those. Correct me if I'm wrong!
+# 2. Setting the seed
+set.seed(5)
 
-# Creating empty data frame for the simulated data
-moose_simulated <- data.frame(matrix(0, ncol = 0, nrow = nrow(moose_untouched)))
-moose_size <- nrow(moose_simulated)
+# 3. Simulating the data
 
-#Set seed
-set.seed(1234)
+# Determination the pre-required variables for the function
 
-# Simulating Forest_class (categorical data)
-size_forest <- as.integer(length(moose_untouched$Forest_class))
-
-prob_1 <- sum(moose_untouched$Forest_class == 1)/moose_size
-prob_2 <- sum(moose_untouched$Forest_class == 2)/moose_size
-prob_3 <- sum(moose_untouched$Forest_class == 3)/moose_size
-prob_4 <- sum(moose_untouched$Forest_class == 4)/moose_size
-
-moose_simulated$Forest_class <- sample(c(1:4), size = size_forest, replace = TRUE, prob = c(prob_1, prob_2, prob_3, prob_4))
-
-# Checking simulated data for Forest_class
-par(mfrow = c(1,2))
-hist(moose_untouched$Forest_class,
-     main = "Forest Class - Raw")
-hist(moose_simulated$Forest_class,
-     main = "Forest Class - Simulated")
-table(moose_untouched$Forest_class) # 1 = 499; 2 = 2386; 3 = 4301; 4 = 3309
-table(moose_simulated$Forest_class) # 1 = 477; 2 = 2387; 3 = 4255; 4 = 3376
-
-# Simulating wolf territory (binomial distribution)
-prob_wolf <- sum(moose_untouched$Wolf.territory == 1) / moose_size
-
-moose_simulated$Wolf.territory <- rbinom(moose_size, 1, prob_wolf)
-
-# Checking simulated data for wolf territory
-hist(moose_untouched$Wolf.territory,
-     main = "Wolf Territory - Raw")
-hist(moose_simulated$Wolf.territory,
-     main = "Wolf Territory - Simulated")
-table(moose_untouched$Wolf.territory) # 0 = 6518; 1 = 3977
-table(moose_simulated$Wolf.territory) # 0 = 6452; 1 = 4043
-
-# Simulating moose presence (binomial distribution)
-prob_moose <- sum(moose_untouched$Moose.presence == 1) / moose_size
-
-moose_simulated$Moose.presence <- rbinom(moose_size, 1, prob_moose)
-
-# Checking simulated data for moose presence
-hist(moose_untouched$Moose.presence,
-     main = "Moose Presence - Raw")
-hist(moose_simulated$Moose.presence,
-     main = "Moose Presence - Simulated")
-table(moose_untouched$Moose.presence) # 0 = 9252; 1 = 1242
-table(moose_simulated$Moose.presence) # 0 = 9239; 1 = 1256
-
-# Simulating RASE presence (binomial distribution)
-prob_rase <- sum(moose_untouched$RASE.presence == 1) / moose_size
-
-moose_simulated$Rase.presence <- rbinom(moose_untouched$RASE.presence, 1, prob_rase)
-
-# Checking simulated data for RASE presence
-hist(moose_untouched$RASE.presence,
-     main = "RASE Presence - Raw")
-hist(moose_simulated$Rase.presence,
-     main = "RASE Presence - Simulated")
-table(moose_untouched$RASE.presence) # 0 = 5018; 1 = 5477
-table(moose_simulated$Rase.presence) # 0 - 4968; 1 = 5527
-
-# Simulating Taxar (uniform distribution of dates)
-# We need the package purrr (in tidyverse)
-moose_simulated$Taxar <- purrr::rdunif(moose_size, min(moose_untouched$Taxar), max(moose_untouched$Taxar))
-
-# Checking simulated data for Taxar
-hist(moose_untouched$Taxar,
-     main = "Taxar - Raw")
-hist(moose_simulated$Taxar,
-     main = "Taxar - Simulated")
-table(moose_untouched$Taxar)
-table(moose_simulated$Taxar)
-
-
-
-##=================================================================================
-##=================================================================================
-
-## Jenna trying to simulate small roads, big roads, pellet counts, pine proportion
-
-## Small roads:
-?rdunif
-hist(moose_untouched$Small.roads)
-mean(moose_untouched$Small.roads)
-sd(moose_untouched$Small.roads)
-moose_simulated$Small.roads <- rnbinom(n = nrow(moose_simulated), mu=254.1479, size=1.25) 
-?rnbinom
-
-# compare simulated to untouched
-hist(moose_untouched$Small.roads)
-hist(moose_simulated$Small.roads)
-
-summary(moose_untouched$Small.roads)
-summary(moose_simulated$Small.roads)
-
-
-## Big roads:
-mean(moose_untouched$Big.roads)
-sd(moose_untouched$Big.roads)
-moose_simulated$Big.roads <- rnbinom(n = nrow(moose_simulated), mu=2288.179, size=1.25) 
-
-# compare simulated to untouched
-hist(moose_untouched$Big.roads)
-hist(moose_simulated$Big.roads)
-
-summary(moose_untouched$Big.roads)
-summary(moose_simulated$Big.roads)
-
-
-## Pellet counts
-summary(moose_untouched$Pellet.counts)
-moose_simulated$Pellet.counts <- rnbinom(n = nrow(moose_simulated), mu=0.1675, size=0.1) 
-
-# compare simulated to untouched
-summary(moose_untouched$Pellet.counts)
-summary(moose_simulated$Pellet.counts)
-
-hist(moose_untouched$Pellet.counts)
-hist(moose_simulated$Pellet.counts)
-
-
-## Pine proportion (zero-inflated negative binomial)
-
-# Determinating pre-required variables for the function
-
-# Adjusting the data (we have to confirm this part)
-moose_simulated$Pine.untouche.100 <- (moose_untouched$Pine_proportion)*100
+# Adjusting the data
+# ADD DETAIL WHY (SABRINA)
+moose_simulated$Pine_raw_100 <- (moose_raw$Pine_proportion)*100
 
 # zprob : probability of structural zeros
-pine_zprob <- sum(moose_simulated$Pine.untouche.100 == 0)/nrow(moose_simulated)
+pine_zprob <- sum(moose_simulated$Pine_raw_100 == 0)/nrow(moose_raw)
 
 # mu : mean of the pine proportion
-pine_mu <- mean(moose_simulated$Pine.untouche.100)
+pine_mu <- mean(moose_simulated$Pine_raw_100)
 
-# size : overdispersion parameter
-  # First we need to find the variance
-  pine_var <- var(moose_simulated$Pine.untouche.100)
+# Variance : measuring the dispersion
+pine_var <- var(moose_simulated$Pine_raw_100)
 
-  # We can find the size knowing that variance = (mu + mu^2)/size
-  # Then size = (mu + mu^2)/variance
-  pine_size <- (pine_mu + (pine_mu^2))/pine_var
+# Size : the number of scores used to compute a mean (SABRINA)
+# We can find the size knowing that variance = (mu + mu^2)/size
+# Then size = (mu + mu^2)/variance
+pine_size <- (pine_mu + (pine_mu^2))/pine_var
 
 # Simulating the data with the variables established
-install.packages("emdbook")
-library(emdbook)  
-moose_simulated$Pine.proportion <- (rzinbinom(n = nrow(moose_untouched), mu = pine_mu, size = pine_size, zprob = pine_zprob))/100
+moose_simulated$Pine_proportion <- (emdbook::rzinbinom(n = nrow(moose_raw), mu = pine_mu, size = pine_size, zprob = pine_zprob))/100
 
-#Checking the data
-hist(moose_simulated$Pine.proportion)
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Pine_proportion, main = "Simulated data: Pine proportion")
+
+summary(moose_raw$Pine_proportion) # Median = 0.006496; Mean = 0.039826
+summary(moose_simulated$Pine_proportion) # Median = 0.00000; Mean = 0.02409
+
+# Simulating the data : PELLET COUNTS ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Pellet counts`, main = "Raw data: Pellet counts")
+# Zero-inflated negative binomial model
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# ADD DETAIL WHY (SABRINA)
+moose_simulated$Pellet_raw_10 <- (moose_raw$`Pellet counts`)*10
+
+# zprob : probability of structural zeros
+pellet_zprob <- sum(moose_simulated$Pellet_raw_10 == 0)/nrow(moose_raw)
+
+# mu : mean of the pine proportion
+pellet_mu <- mean(moose_simulated$Pellet_raw_10)
+
+# Variance : measuring the dispersion
+pellet_var <- var(moose_simulated$Pellet_raw_10)
+
+# Size : the number of scores used to compute a mean (SABRINA)
+# We can find the size knowing that variance = (mu + mu^2)/size
+# Then size = (mu + mu^2)/variance
+pellet_size <- (pellet_mu + (pellet_mu^2))/pellet_var
+
+# Simulating the data with the variables established
+moose_simulated$Pellet_counts <- (emdbook::rzinbinom(n = nrow(moose_raw), mu = pellet_mu, size = pellet_size, zprob = pellet_zprob))/10
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Pellet_counts, main = "Simulated data: Pellet counts")
+
+summary(moose_raw$`Pellet counts`) # Median = 0.0000; Mean = 0.1675
+summary(moose_simulated$Pellet_counts) # Median = 0.00000; Mean = 0.02233
+
+# Simulating the data : TIME SINCE ESTABLISHMENT ==============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Time since establishment`, main = "Raw data: Time since establishment")
+# Zero-inflated negative binomial model
+
+# 2. Setting the seed
+set.seed(50)
+
+# 3. Simulating the data
+
+# mu : mean of the pine proportion
+time_mu <- mean(moose_raw$`Time since establishment`)
+
+# Variance : measuring the dispersion
+time_var <- var(moose_raw$`Time since establishment`)
+
+# Size : the number of scores used to compute a mean (SABRINA)
+# We can find the size knowing that variance = (mu + mu^2)/size
+# Then size = (mu + mu^2)/variance
+time_size <- (time_mu + (time_mu^2))/time_var
+
+# Simulating the data with the variables established
+moose_simulated$Time_since_establishment <- rnbinom(n = nrow(moose_raw), mu = time_mu, size = time_size)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Time_since_establishment, main = "Simulated data: Time since establishment")
+
+summary(moose_raw$`Time since establishment`) # Median = 0.000; Mean = 2.324
+summary(moose_simulated$Time_since_establishment) # Median = 0.0000; Mean = 0.8843
+
+# Simulating the data : SMALL ROADS ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Small roads`, main = "Raw data: Small Roads") 
+# Zero-inflated negative binomial model
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# mu : mean of the pine proportion
+sroad_mu <- mean(moose_raw$`Small roads`)
+
+# Variance : measuring the dispersion
+sroad_var <- var(moose_raw$`Small roads`)
+
+# Size : the number of scores used to compute a mean (SABRINA)
+# We can find the size knowing that variance = (mu + mu^2)/size
+# Then size = (mu + mu^2)/variance
+sroad_size <- (sroad_mu + (sroad_mu^2))/sroad_var
+
+# Simulating the data with the variables established
+moose_simulated$Small_roads <- rnbinom(n = nrow(moose_raw), mu = sroad_mu, size = sroad_size)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Small_roads, main = "Simulated data: Small roads")
+
+summary(moose_raw$`Small roads`) # Median = 198.9641; Mean = 254.1479
+summary(moose_simulated$Small_roads) # Median = 191.0; Mean = 254.4
+
+# Simulating the data : BIG ROADS ===============================================================#
+
+# 1.  Visualizing the raw data distribution
+hist(moose_raw$`Big roads`, main = "Raw data: Big Roads")
+# Zero-inflated negative binomial model
+
+# 2. Setting the seed
+set.seed(5)
+
+# 3. Simulating the data
+
+# mu : mean of the pine proportion
+broad_mu <- mean(moose_raw$`Big roads`)
+
+# Variance : measuring the dispersion
+broad_var <- var(moose_raw$`Big roads`)
+
+# Size : the number of scores used to compute a mean (SABRINA)
+# We can find the size knowing that variance = (mu + mu^2)/size
+# Then size = (mu + mu^2)/variance
+broad_size <- (broad_mu + (broad_mu^2))/broad_var
+
+# Simulating the data with the variables established
+moose_simulated$Big_roads <- rnbinom(n = nrow(moose_raw), mu = broad_mu, size = broad_size)
+
+# 4. Comparing the simulated data distribution
+hist(moose_simulated$Big_roads, main = "Simulated data: Big roads")
+
+summary(moose_raw$`Big roads`) # Median = 1514.442; Mean = 2288.179
+summary(moose_simulated$Big_roads) # Median = 1456; Mean = 2297
 
 ##==================================================================================
 ## Next runing through the analyses
