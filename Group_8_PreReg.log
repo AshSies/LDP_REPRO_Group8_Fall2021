@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.23)  30 SEP 2021 19:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.9.23)  1 OCT 2021 09:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,6 +619,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 328.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.0pt}.
@@ -629,15 +633,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 376.
+(hyperref)                be the same. Added a new anchor on input line 353.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 401.
+(hyperref)                be the same. Added a new anchor on input line 361.
 
 
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 409.
+Overfull \hbox (12.74121pt too wide) in paragraph at lines 408--413
+ \T1/lmr/m/n/10 ecosys-tems? \T1/lmr/m/it/10 Bio-Science\T1/lmr/m/n/10 , \T1/lm
+r/m/it/10 54\T1/lmr/m/n/10 (8), 755--766. doi:[][]10.1641/0006-3568(2004)054[07
+55:WATEOF]2.0.CO;2[][] 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -648,12 +655,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
 [5]
-Overfull \hbox (12.74121pt too wide) in paragraph at lines 456--461
- \T1/lmr/m/n/10 ecosys-tems? \T1/lmr/m/it/10 Bio-Science\T1/lmr/m/n/10 , \T1/lm
-r/m/it/10 54\T1/lmr/m/n/10 (8), 755--766. doi:[][]10.1641/0006-3568(2004)054[07
-55:WATEOF]2.0.CO;2[][] 
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -669,11 +670,11 @@ Package rerunfilecheck Info: File `Group_8_PreReg.out' has not changed.
 Here is how much of TeX's memory you used:
  10285 strings out of 480559
  151664 string characters out of 5901528
- 455476 words of memory out of 5000000
+ 454476 words of memory out of 5000000
  27693 multiletter control sequences out of 15000+600000
  445364 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,11n,66p,268b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,66p,268b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.e
 nc}{c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
 nc}<c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx
@@ -686,7 +687,7 @@ ype1/public/lm/lmr17.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmr8.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dist/fo
 nts/type1/public/lm/lmri10.pfb><c:/Users/User/AppData/Roaming/TinyTeX/texmf-dis
 t/fonts/type1/public/lm/lmri12.pfb>
-Output written on Group_8_PreReg.pdf (6 pages, 240377 bytes).
+Output written on Group_8_PreReg.pdf (6 pages, 240980 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  165 compressed objects within 2 object streams

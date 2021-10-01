@@ -89,33 +89,13 @@ The study will be conducted using data retrieved from various government and pri
 
 Variable data will be collected within the study area of south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible. Seven variables will be use in statistical analysis of the effect of wolves on the presence and abundance of moose.
 
-1) Moose pellet counts:
-
-Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014]. The data source for this variable is the Swedish National Forest Inventory.
-
-2) Forest age stages:
-
-There are four forest age stages considered when moose pellet count surveys are conducted. These stages classified as clear-cut, young, thinned, and mature. The data source for this variable is the Swedish National Forest Inventory.
-
-3) Pine proportion:
-
-Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability. The data source for this variable is the Swedish National Forest Inventory.
-
-4) Distance to the nearest forest road (km):
-
-Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
-
-5) Distance to the nearest main road (km):
-
-Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
-
-6) Wolf presence:
-
-Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius will be used based on the average wolf territory size in Scandinavia [@liberg2011]. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
-
-7) Time since wolf territory establishment:
-
-A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
+1)  *Moose pellet counts:* Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014]. The data source for this variable is the Swedish National Forest Inventory.
+2)  *Forest age stages:* There are four forest age stages considered when moose pellet count surveys are conducted. These stages classified as clear-cut, young, thinned, and mature. The data source for this variable is the Swedish National Forest Inventory.
+3)  *Pine proportion:* Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability. The data source for this variable is the Swedish National Forest Inventory.
+4)  *Distance to the nearest forest road (km):* Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+5)  *Distance to the nearest main road (km):* Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+6)  *Wolf presence:* Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius will be used based on the average wolf territory size in Scandinavia [@liberg2011]. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
+7)  *Time since wolf territory establishment:* A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
 
 # Analysis Plan
 
