@@ -209,7 +209,7 @@ pine_mu <- mean(moose_simulated$Pine.untouche.100)
 # Simulating the data with the variables established
 install.packages("emdbook")
 library(emdbook)  
-moose_simulated$Pine.proportion <- (rzinbinom(n = nrow(moose_untouched), mu = pine_mu, size = pine_size, zprob = pine_zprob))
+moose_simulated$Pine.proportion <- (rzinbinom(n = nrow(moose_untouched), mu = pine_mu, size = pine_size, zprob = pine_zprob))/100
 
 #Checking the data
 hist(moose_simulated$Pine.proportion)
