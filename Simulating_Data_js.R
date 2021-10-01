@@ -1,12 +1,11 @@
-##================== LDP: Productivity and Reproducibility ========================
-## ================= Group Assignment: Pre-Registration ===========================
+#=================================================================================================#
+#============================ LDP: Productivity and Reproducibility ==============================#
+#============================== Group Assignment: Pre-Registration ===============================#
+#=============== By : Ashton Sies, Emma Nikkel, Jenna Scherger, and Sabrina St-Pierre ============#
+#================================== Date : 1st of October 2021 ===================================#
+#=================================================================================================#
 
-## R script includes:
-# 1. Simulated data
-# 2. Rerunning analyses
-# 3. Figures
-
-# Read in packages:=================================================================
+# Read in packages ===============================================================================#
 library(tidyverse) # for wrangling data - using primarily dplyr, tidyr, purrr, maybe ggplot
 library(parallel) # for parallel processing when running model selection 
 library(glmmTMB) # for running model
@@ -14,28 +13,16 @@ library(MuMIn) # for dredging
 library(sjPlot) # for marginal effects plots
 
 
-# Set working directory:===========================================================
-#Sabrina : setwd("C:/Users/sabri/Desktop/RDP_REPRO/LDP_REPRO_Group8_Fall2021")
-#Jenna : setwd("/Users/jennascherger/Desktop/MSc/Courses/NSERC_CREATE/01_Productivity_Reproducibility/Assignments/02_Reproducible_Research/LDP_REPRO_Group8_Fall2021")
+# Importing the raw data =========================================================================#
+# The data are available here
+# https://datadryad.org/stash/share/svRCeH_hvPZVH2UjmzWQOvErl-B6deccaKMXgGEeHtM
+
+library(readxl)
+moose_untouched <- read_excel("Raw_Data/Moose_presence_abundance.xlsx")
 
 
-# Read in data:===================================================================
-#library(readxl) - if reading in the xlsx file need to use this
-# Sabrina : When I import the csv, the columns names are off...
-moose_untouched <- read.csv("Raw_Data/Moose_presence_abundance.csv")
 
-names(moose_untouched)
 
-#Sabrina : Ignore this, i wanted to know where each column was.
-#grep("Forest_class", names(moose_untouched)) #factor
-#grep("Wolf.territory", names(moose_untouched)) #factor
-#grep("Moose.presence", names(moose_untouched)) #factor
-#grep("Small", names(moose_untouched)) #factor
-#grep("Big", names(moose_untouched)) #factor
-#grep("RASE.presence", names(moose_untouched)) # factor
-#grep("Pine_proportion", names(moose_untouched))
-#grep("Taxar", names(moose_untouched)) #factor
-#grep("Pellet counts", names(moose_untouched))
 
 #To look at the distribution to determine how to simulate the data
 dev.off() # Sabrina : It's not working on my computer?
@@ -124,8 +111,7 @@ table(moose_simulated$Rase.presence) # 0 - 4968; 1 = 5527
 
 # Simulating Taxar (uniform distribution of dates)
 # We need the package purrr (in tidyverse)
-library(purrr)
-moose_simulated$Taxar <- rdunif(moose_size, min(moose_untouched$Taxar), max(moose_untouched$Taxar))
+moose_simulated$Taxar <- purrr::rdunif(moose_size, min(moose_untouched$Taxar), max(moose_untouched$Taxar))
 
 # Checking simulated data for Taxar
 hist(moose_untouched$Taxar,
@@ -212,23 +198,6 @@ moose_simulated$Pine.proportion <- (rzinbinom(n = nrow(moose_untouched), mu = pi
 #Checking the data
 hist(moose_simulated$Pine.proportion)
 
-##==================================================================================
-
-# OLD TRIALS FOR PINE AND TIME SINCE ESTABLISHEMENT
-  #moose_simulated$Pine.proportion <- rnbinom(n = nrow(moose_simulated), mu=0.039826, size=0.52) 
-
-  #hist(moose_untouched$Pine_proportion)
-  #summary(moose_untouched$Pine_proportion)
-  #summary(moose_simulated$Pine.proportion)
-  #hist(moose_simulated$Pine.proportion)
-  #dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
-
-  # Infos for Pine
-  # Possibility to make a log transformation? : This could normalize the data and give it a normal distribution 
-  # that can be easier to simulate.
-  # Find a way to determine parameter size and zprob in rzinbinom.
-
-##==================================================================================
 ##==================================================================================
 ## Next runing through the analyses
 
@@ -450,3 +419,8 @@ pineprop <- ggplot(data = pred_pineproportion) +
     #title = paste(
     #"Example group_by() with summarise()"
   )
+
+
+#=================================================================================================#
+#==================================== END OF SCRIPT ==============================================#
+#=================================================================================================#
