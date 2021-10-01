@@ -6,6 +6,7 @@
 #=================================================================================================#
 
 # Read in packages ===============================================================================#
+library(readxl) # To import excel documents.
 library(tidyverse) # for wrangling data - using primarily dplyr, tidyr, purrr, maybe ggplot
 library(parallel) # for parallel processing when running model selection 
 library(glmmTMB) # for running model
@@ -14,19 +15,18 @@ library(sjPlot) # for marginal effects plots
 
 
 # Importing the raw data =========================================================================#
-# The data are available here
+# The data are available on a Dryad repository
 # https://datadryad.org/stash/share/svRCeH_hvPZVH2UjmzWQOvErl-B6deccaKMXgGEeHtM
 
-library(readxl)
-moose_untouched <- read_excel("Raw_Data/Moose_presence_abundance.xlsx")
+moose_raw <- readxl::read_excel("Raw_Data/Moose_presence_abundance.xlsx")
 
-
+# Defining the distribution of the raw data ======================================================#
+# To simulate adequately the data, we first need to determine how they are distributed.
+# To do so we will visualize the variables required to models the moose abundance.
 
 
 
 #To look at the distribution to determine how to simulate the data
-dev.off() # Sabrina : It's not working on my computer?
-par(mfrow = c(2,4))
 hist(moose_untouched$Taxar,
     main = "Taxar")
 hist(moose_untouched$Forest_class,
