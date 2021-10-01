@@ -15,17 +15,18 @@ library(sjPlot) # for marginal effects plots
 
 
 # Set working directory:===========================================================
-#setwd("C:/Users/sabri/OneDrive/Documents/BackUp/Living Data Project/Productivity/Assignements/Reproductibility/doi_10.5061_dryad.5hqbzkh37__v2")
-setwd("/Users/jennascherger/Desktop/MSc/Courses/NSERC_CREATE/01_Productivity_Reproducibility/Assignments/02_Reproducible_Research/LDP_REPRO_Group8_Fall2021")
+#Sabrina : setwd("C:/Users/sabri/Desktop/RDP_REPRO/LDP_REPRO_Group8_Fall2021")
+#Jenna : setwd("/Users/jennascherger/Desktop/MSc/Courses/NSERC_CREATE/01_Productivity_Reproducibility/Assignments/02_Reproducible_Research/LDP_REPRO_Group8_Fall2021")
 
 
 # Read in data:===================================================================
 #library(readxl) - if reading in the xlsx file need to use this
+# Sabrina : When I import the csv, the columns names are off...
 moose_untouched <- read.csv("Raw_Data/Moose_presence_abundance.csv")
 
 names(moose_untouched)
 
-# Ignore this, i wanted to know where each column was.
+#Sabrina : Ignore this, i wanted to know where each column was.
 #grep("Forest_class", names(moose_untouched)) #factor
 #grep("Wolf.territory", names(moose_untouched)) #factor
 #grep("Moose.presence", names(moose_untouched)) #factor
@@ -36,8 +37,8 @@ names(moose_untouched)
 #grep("Taxar", names(moose_untouched)) #factor
 #grep("Pellet counts", names(moose_untouched))
 
-#To look at the distribution
-dev.off()
+#To look at the distribution to determine how to simulate the data
+dev.off() # Sabrina : It's not working on my computer?
 par(mfrow = c(2,4))
 hist(moose_untouched$Taxar,
     main = "Taxar")
@@ -54,9 +55,9 @@ hist(moose_untouched$Big.roads,
 hist(moose_untouched$Pine_proportion,
      main = "Pine Proportion")
 
-# I looked through the script for abundance and I think we only need to simulate those. Correct me if I'm wrong!
+# Sabrina : I looked through the script for abundance and I think we only need to simulate those. Correct me if I'm wrong!
 
-# Creating empty data frame
+# Creating empty data frame for the simulated data
 moose_simulated <- data.frame(matrix(0, ncol = 0, nrow = nrow(moose_untouched)))
 moose_size <- nrow(moose_simulated)
 
@@ -73,7 +74,7 @@ prob_4 <- sum(moose_untouched$Forest_class == 4)/moose_size
 
 moose_simulated$Forest_class <- sample(c(1:4), size = size_forest, replace = TRUE, prob = c(prob_1, prob_2, prob_3, prob_4))
 
-# Checking simulated data
+# Checking simulated data for Forest_class
 par(mfrow = c(1,2))
 hist(moose_untouched$Forest_class,
      main = "Forest Class - Raw")
@@ -87,7 +88,7 @@ prob_wolf <- sum(moose_untouched$Wolf.territory == 1) / moose_size
 
 moose_simulated$Wolf.territory <- rbinom(moose_size, 1, prob_wolf)
 
-# Checking simulated data
+# Checking simulated data for wolf territory
 hist(moose_untouched$Wolf.territory,
      main = "Wolf Territory - Raw")
 hist(moose_simulated$Wolf.territory,
@@ -100,7 +101,7 @@ prob_moose <- sum(moose_untouched$Moose.presence == 1) / moose_size
 
 moose_simulated$Moose.presence <- rbinom(moose_size, 1, prob_moose)
 
-# Checking simulated data
+# Checking simulated data for moose presence
 hist(moose_untouched$Moose.presence,
      main = "Moose Presence - Raw")
 hist(moose_simulated$Moose.presence,
@@ -113,7 +114,7 @@ prob_rase <- sum(moose_untouched$RASE.presence == 1) / moose_size
 
 moose_simulated$Rase.presence <- rbinom(moose_untouched$RASE.presence, 1, prob_rase)
 
-# Checking simulated data
+# Checking simulated data for RASE presence
 hist(moose_untouched$RASE.presence,
      main = "RASE Presence - Raw")
 hist(moose_simulated$Rase.presence,
@@ -126,7 +127,7 @@ table(moose_simulated$Rase.presence) # 0 - 4968; 1 = 5527
 library(purrr)
 moose_simulated$Taxar <- rdunif(moose_size, min(moose_untouched$Taxar), max(moose_untouched$Taxar))
 
-# Checking simulated data:
+# Checking simulated data for Taxar
 hist(moose_untouched$Taxar,
      main = "Taxar - Raw")
 hist(moose_simulated$Taxar,
@@ -194,6 +195,10 @@ summary(moose_simulated$Pine.proportion)
 hist(moose_simulated$Pine.proportion)
 dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
 
+# Infos for Pine
+# Possibility to make a log transformation? : This could normalize the data and give it a normal distribution 
+# that can be easier to simulate.
+# Find a way to determine parameter size and zprob in rzinbinom.
 
 ##==================================================================================
 ##==================================================================================
