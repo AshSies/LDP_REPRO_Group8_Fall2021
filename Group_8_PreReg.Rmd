@@ -9,7 +9,7 @@ author:
   - name        : Emma Nikkel
     affiliation : "2"
   - name        : Jenna Scherger
-    affiliation : 
+    affiliation : "3"
   - name        : Sabrina St-Pierre
     affiliation : ""
 
@@ -18,6 +18,8 @@ affiliation:
     institution : Wilhelm-Wundt-University
   - id          : 2
     institution : Konstanz Business School
+  - id          : 3
+    institution :
 
 output: prereg::cos_prereg
 bibliography: references.bib

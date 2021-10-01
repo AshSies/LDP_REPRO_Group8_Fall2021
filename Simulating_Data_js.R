@@ -53,6 +53,8 @@ hist(moose_untouched$Big.roads,
      main = "Big Roads")
 hist(moose_untouched$Pine_proportion,
      main = "Pine Proportion")
+hist(moose_untouched$Time.since.establishment,
+     main = "Time Since Establishment")
 
 # I looked through the script for abundance and I think we only need to simulate those. Correct me if I'm wrong!
 
@@ -195,9 +197,55 @@ hist(moose_simulated$Pine.proportion)
 dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
 
 
+
+## Time since establishment
+table(moose_untouched$Time.since.establishment)
+tse_0 <- sum(moose_untouched$Time.since.establishment == 0)/moose_size
+tse_1 <- sum(moose_untouched$Time.since.establishment == 1)/moose_size
+tse_2 <- sum(moose_untouched$Time.since.establishment == 2)/moose_size
+tse_3 <- sum(moose_untouched$Time.since.establishment == 3)/moose_size
+tse_4 <- sum(moose_untouched$Time.since.establishment == 4)/moose_size
+tse_5 <- sum(moose_untouched$Time.since.establishment == 5)/moose_size
+tse_6 <- sum(moose_untouched$Time.since.establishment == 6)/moose_size
+tse_7 <- sum(moose_untouched$Time.since.establishment == 7)/moose_size
+tse_8 <- sum(moose_untouched$Time.since.establishment == 8)/moose_size
+tse_9 <- sum(moose_untouched$Time.since.establishment == 9)/moose_size
+tse_10 <- sum(moose_untouched$Time.since.establishment == 10)/moose_size
+tse_11 <- sum(moose_untouched$Time.since.establishment == 11)/moose_size
+tse_12 <- sum(moose_untouched$Time.since.establishment == 12)/moose_size
+tse_13 <- sum(moose_untouched$Time.since.establishment == 13)/moose_size
+tse_14 <- sum(moose_untouched$Time.since.establishment == 14)/moose_size
+tse_15 <- sum(moose_untouched$Time.since.establishment == 15)/moose_size
+tse_16 <- sum(moose_untouched$Time.since.establishment == 16)/moose_size
+tse_17 <- sum(moose_untouched$Time.since.establishment == 17)/moose_size
+tse_18 <- sum(moose_untouched$Time.since.establishment == 18)/moose_size
+tse_19 <- sum(moose_untouched$Time.since.establishment == 19)/moose_size
+tse_20 <- sum(moose_untouched$Time.since.establishment == 20)/moose_size
+tse_21 <- sum(moose_untouched$Time.since.establishment == 21)/moose_size
+tse_22 <- sum(moose_untouched$Time.since.establishment == 22)/moose_size
+tse_23 <- sum(moose_untouched$Time.since.establishment == 23)/moose_size
+tse_24 <- sum(moose_untouched$Time.since.establishment == 24)/moose_size
+tse_26 <- sum(moose_untouched$Time.since.establishment == 26)/moose_size
+tse_27 <- sum(moose_untouched$Time.since.establishment == 27)/moose_size
+
+moose_simulated$Time.since.establishment <- sample(c(0:24, 26, 27), size = moose_size,
+                                       replace = TRUE, 
+                                       prob = c(tse_0, tse_1, tse_2, tse_3, tse_4,
+                                                tse_5, tse_6, tse_7, tse_8,
+                                                tse_9, tse_10, tse_11, tse_12,
+                                                tse_13, tse_14, tse_15, tse_16,
+                                                tse_17, tse_18, tse_19, tse_20,
+                                                tse_21, tse_22, tse_23, tse_24, 
+                                                tse_26, tse_27))
+
+hist(moose_simulated$Time.since.establishment)
+hist(moose_untouched$Time.since.establishment)
+summary(moose_simulated$Time.since.establishment)
+summary(moose_untouched$Time.since.establishment)
+head(moose_simulated)
 ##==================================================================================
 ##==================================================================================
-## Next runing through the analyses
+## Next running through the analyses
 
 
 # Still need pellet counts, big roads, and small roads - not familar with how to simulate, so for now I (jenna) will just
@@ -205,11 +253,11 @@ dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
 #head(moose_untouched)
 
 ## Adding pellet counts, pine proprtion, big, and small roads:
-#moose_simulated <- moose_simulated %>%
+moose_simulated <- moose_simulated %>%
 #  mutate(Small.roads = moose_untouched$Small.roads) %>%
 #  mutate(Big.roads = moose_untouched$Big.roads) %>%
 #  mutate(Pellet.counts = moose_untouched$Pellet.counts) %>%
-#  mutate(Pine.proportion = moose_untouched$Pine_proportion)
+  mutate(Pine.proportion = moose_untouched$Pine_proportion)
   
 
 ## Now following the authors script:
@@ -237,7 +285,7 @@ zifo <- ~ Pine.proportion + Big + Small
 # start model
 m_moose_ab <- glmmTMB(Pellet.counts ~ Wolf.territory + Forest_class +
                         Wolf.territory:Forest_class + Pine.proportion + Big +
-                        Small + Rase.presence + (1|Taxar),
+                        Small + Rase.presence + Time.since.establishment + (1|Taxar),
                       data = moose_simulated,
                       ziformula = zifo,
                       family = nbinom2)
@@ -250,8 +298,8 @@ moose_ab_m_lst <- dredge(m_moose_ab, evaluate = FALSE)
 length(moose_ab_m_lst)
 
 
-moose_ab_m_all <- dredge(m_moose_ab)
-head(moose_ab_m_all)
+#moose_ab_m_all <- dredge(m_moose_ab)
+#head(moose_ab_m_all)
 
 # fit all models outside of "model.selection" to avoid having to refit
 # note: function mclapply() is not available on windows
@@ -375,8 +423,17 @@ Plot_abu_pineproportion <- sjPlot::plot_model(moose_ab_best_model, type= "pred",
 Plot_abu_pineproportion + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 
+# Time since establishment
+Plot_abu_tse <- sjPlot::plot_model(moose_ab_best_model, type= "pred", terms = ("Time.since.establishment"),
+                                              axis.title = c("Time Since Establishment", "Moose pellet counts"), 
+                                              title = "",
+                                              base_family = "Arial Narrow")
+Plot_abu_tse + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
+
+
+
 ## Plot Grid:
-sjPlot::plot_grid(list(Plot_abu_mainroads, Plot_abu_forestroads, Plot_abu_wolfterritory,
+sjPlot::plot_grid(list(Plot_abu_mainroads, Plot_abu_forestroads, Plot_abu_wolfterritory, Plot_abu_tse,
                Plot_abu_foreststage, Plot_abu_pineproportion), tags = TRUE) + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 ggsave("mooseabundance_forestplot_29Sept21.png",
