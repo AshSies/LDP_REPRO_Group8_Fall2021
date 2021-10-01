@@ -222,7 +222,7 @@ summary(moose_simulated$Pellet_counts) # Median = 0.00000; Mean = 0.02233
 
 # 1.  Visualizing the raw data distribution
 hist(moose_raw$`Time since establishment`, main = "Raw data: Time since establishment")
-# Zero-inflated negative binomial model
+# Negative binomial model
 
 # 2. Setting the seed
 set.seed(50)
@@ -253,7 +253,7 @@ summary(moose_simulated$Time_since_establishment) # Median = 0.0000; Mean = 0.88
 
 # 1.  Visualizing the raw data distribution
 hist(moose_raw$`Small roads`, main = "Raw data: Small Roads") 
-# Zero-inflated negative binomial model
+# Negative binomial model
 
 # 2. Setting the seed
 set.seed(5)
@@ -284,7 +284,7 @@ summary(moose_simulated$Small_roads) # Median = 191.0; Mean = 254.4
 
 # 1.  Visualizing the raw data distribution
 hist(moose_raw$`Big roads`, main = "Raw data: Big Roads")
-# Zero-inflated negative binomial model
+# Negative binomial model
 
 # 2. Setting the seed
 set.seed(5)
