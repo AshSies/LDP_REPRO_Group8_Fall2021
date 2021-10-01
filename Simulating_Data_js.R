@@ -225,7 +225,7 @@ hist(moose_raw$`Time since establishment`, main = "Raw data: Time since establis
 # Negative binomial model
 
 # 2. Setting the seed
-set.seed(50)
+set.seed(5)
 
 # 3. Simulating the data
 
@@ -247,7 +247,7 @@ moose_simulated$Time_since_establishment <- rnbinom(n = nrow(moose_raw), mu = ti
 hist(moose_simulated$Time_since_establishment, main = "Simulated data: Time since establishment")
 
 summary(moose_raw$`Time since establishment`) # Median = 0.000; Mean = 2.324
-summary(moose_simulated$Time_since_establishment) # Median = 0.0000; Mean = 0.8843
+summary(moose_simulated$Time_since_establishment) # Median = 1.0000; Mean = 2.345
 
 # Simulating the data : SMALL ROADS ===============================================================#
 
