@@ -1,19 +1,28 @@
-#My working directory
+##================== LDP: Productivity and Reproducibility ========================
+## ================= Group Assignment: Pre-Registration ===========================
+
+## R script includes:
+# 1. Simulated data
+# 2. Rerunning analyses
+# 3. Figures
+
+# Read in packages:=================================================================
+library(tidyverse) # for wrangling data - using primarily dplyr, tidyr, purrr, maybe ggplot
+library(parallel) # for parallel processing when running model selection 
+library(glmmTMB) # for running model
+library(MuMIn) # for dredging
+library(sjPlot) # for marginal effects plots
+
+
+# Set working directory:===========================================================
 #setwd("C:/Users/sabri/OneDrive/Documents/BackUp/Living Data Project/Productivity/Assignements/Reproductibility/doi_10.5061_dryad.5hqbzkh37__v2")
 setwd("/Users/jennascherger/Desktop/MSc/Courses/NSERC_CREATE/01_Productivity_Reproducibility/Assignments/02_Reproducible_Research/LDP_REPRO_Group8_Fall2021")
 
-## Read in packages:
-library(tidyverse)
-library(parallel)
-library(glmmTMB) # for running model
-library(MuMIn) # for dredging
 
-#Needed to import the data
+# Read in data:===================================================================
 #library(readxl) - if reading in the xlsx file need to use this
-moose_original <- read.csv("Raw_Data/Moose_presence_abundance.csv")
 moose_untouched <- read.csv("Raw_Data/Moose_presence_abundance.csv")
 
-names(moose_original)
 names(moose_untouched)
 
 # Ignore this, i wanted to know where each column was.
@@ -48,7 +57,7 @@ hist(moose_untouched$Pine_proportion,
 # I looked through the script for abundance and I think we only need to simulate those. Correct me if I'm wrong!
 
 # Creating empty data frame
-moose_simulated <- data.frame(matrix(0, ncol = 0, nrow = 10495))
+moose_simulated <- data.frame(matrix(0, ncol = 0, nrow = nrow(moose_untouched)))
 moose_size <- nrow(moose_simulated)
 
 #Set seed
@@ -116,23 +125,91 @@ table(moose_simulated$Rase.presence) # 0 - 4968; 1 = 5527
 # We need the package purrr (in tidyverse)
 library(purrr)
 moose_simulated$Taxar <- rdunif(moose_size, min(moose_untouched$Taxar), max(moose_untouched$Taxar))
-hist(moose_simulated$Taxar)
+
+# Checking simulated data:
+hist(moose_untouched$Taxar,
+     main = "Taxar - Raw")
+hist(moose_simulated$Taxar,
+     main = "Taxar - Simulated")
+table(moose_untouched$Taxar)
+table(moose_simulated$Taxar)
+
 
 #Out put of what Sabrina had
 #write.csv(moose_simulated, "Moose_simulate")
 
+##=================================================================================
+##=================================================================================
 
-head(moose_simulated)
+## Jenna trying to simulate small roads, big roads, pellet counts, pine proportion
+
+## Small roads:
+?rdunif
+hist(moose_untouched$Small.roads)
+mean(moose_untouched$Small.roads)
+sd(moose_untouched$Small.roads)
+moose_simulated$Small.roads <- rnbinom(n = nrow(moose_simulated), mu=254.1479, size=1.25) 
+?rnbinom
+
+# compare simulated to untouched
+hist(moose_untouched$Small.roads)
+hist(moose_simulated$Small.roads)
+
+summary(moose_untouched$Small.roads)
+summary(moose_simulated$Small.roads)
+
+
+## Big roads:
+mean(moose_untouched$Big.roads)
+sd(moose_untouched$Big.roads)
+moose_simulated$Big.roads <- rnbinom(n = nrow(moose_simulated), mu=2288.179, size=1.25) 
+
+# compare simulated to untouched
+hist(moose_untouched$Big.roads)
+hist(moose_simulated$Big.roads)
+
+summary(moose_untouched$Big.roads)
+summary(moose_simulated$Big.roads)
+
+
+## Pellet counts
+summary(moose_untouched$Pellet.counts)
+moose_simulated$Pellet.counts <- rnbinom(n = nrow(moose_simulated), mu=0.1675, size=0.1) 
+
+# compare simulated to untouched
+summary(moose_untouched$Pellet.counts)
+summary(moose_simulated$Pellet.counts)
+
+hist(moose_untouched$Pellet.counts)
+hist(moose_simulated$Pellet.counts)
+
+
+
+## Pine proportion
+moose_simulated$Pine.proportion <- rnbinom(n = nrow(moose_simulated), mu=0.039826, size=0.52) 
+
+hist(moose_untouched$Pine_proportion)
+summary(moose_untouched$Pine_proportion)
+summary(moose_simulated$Pine.proportion)
+hist(moose_simulated$Pine.proportion)
+dbinom(nrow(moose_simulated), size = 27, prob = 0.25)
+
+
+##==================================================================================
+##==================================================================================
+## Next runing through the analyses
+
+
 # Still need pellet counts, big roads, and small roads - not familar with how to simulate, so for now I (jenna) will just
 # use the raw values
-head(moose_untouched)
+#head(moose_untouched)
 
 ## Adding pellet counts, pine proprtion, big, and small roads:
-moose_simulated <- moose_simulated %>%
-  mutate(Small.roads = moose_untouched$Small.roads) %>%
-  mutate(Big.roads = moose_untouched$Big.roads) %>%
-  mutate(Pellet.counts = moose_untouched$Pellet.counts) %>%
-  mutate(Pine.proportion = moose_untouched$Pine_proportion)
+#moose_simulated <- moose_simulated %>%
+#  mutate(Small.roads = moose_untouched$Small.roads) %>%
+#  mutate(Big.roads = moose_untouched$Big.roads) %>%
+#  mutate(Pellet.counts = moose_untouched$Pellet.counts) %>%
+#  mutate(Pine.proportion = moose_untouched$Pine_proportion)
   
 
 ## Now following the authors script:

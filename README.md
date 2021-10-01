@@ -1,6 +1,7 @@
 # LDP_REPRO_Group8_Fall2021
 
-Living Data Project: Productivity and Reproducibility Module 
+Living Data Project: Productivity and Reproducibility Module
+
 September 2021
 
 Reproducible Research Group Assignment - Option 1
