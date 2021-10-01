@@ -1,7 +1,7 @@
 ---
-title           : "My preregistration for the COS Preregistration Challenge"
-shorttitle      : "My preregistration"
-date            : "October 6, 2021"
+title           : "The effects of wolves on moose presence and abundance in central Sweden."
+shorttitle      : "Effects of wolves on moose presence"
+date            : "Oct 6, 2021"
 
 author: 
   - name        : Ashton Sies
@@ -15,7 +15,7 @@ author:
 
 affiliation:
   - id          : 1
-    institution : Wilhelm-Wundt-University
+    institution : University of Regina
   - id          : 2
     institution : Konstanz Business School
 
@@ -32,7 +32,7 @@ bibliography: references.bib
 
 Example: Effect of sugar on brownie tastiness. -->
 ```
-`r rmarkdown::metadata$title` The effects of wolves on moose presence and abundance in central Sweden.
+`r rmarkdown::metadata$title`
 
 ## Description
 
