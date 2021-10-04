@@ -9,11 +9,7 @@ author:
   - name        : Emma Nikkel
     affiliation : "2"
   - name        : Jenna Scherger
-<<<<<<< HEAD
     affiliation : "3"
-=======
-    affiliation : ""
->>>>>>> ef0c7bce14021de9f53f80ab65cf6ff285a04c99
   - name        : Sabrina St-Pierre
     affiliation : ""
 
@@ -21,13 +17,10 @@ affiliation:
   - id          : 1
     institution : University of Regina
   - id          : 2
-<<<<<<< HEAD
-    institution : Konstanz Business School
+    institution : University of British Columbia
   - id          : 3
-=======
     institution : University of British Columbia
   - id          :
->>>>>>> ef0c7bce14021de9f53f80ab65cf6ff285a04c99
     institution :
 
 output: prereg::cos_prereg
@@ -90,7 +83,7 @@ Upon further research I think this study would be better-classified as **a regre
 
 ## Data collection
 
-The study will be conducted using data retrieved from various government and private sector institutions (Table 1) between 2003 and 2016, as is consistent with the original study by Ausilio et al. The study area will be the northern range of south-central Sweden's breeding range of wolves, distinct from the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
+The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
 
 ## Variables
 
