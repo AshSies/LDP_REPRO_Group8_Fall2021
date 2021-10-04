@@ -62,9 +62,11 @@ Example: If taste affects preference, then mean preference indices will be highe
 ```
 We hypothesize that:
 
-1)  Wolf presence and wolf territory establishment will moderately increase the probability of moose presence, and overall moose abundance.
+1)  Wolf presence will moderately increase probability of moose presence, and overall moose abundance.
 
-2)  'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or wolf territory establishment.
+2)  Time since wolf territory establishment will positively effect probability of moose presence, and overall moose abundance.
+
+3)  'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or time since wolf territory establishment.
 
 # Design Plan
 
