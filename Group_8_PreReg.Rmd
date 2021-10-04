@@ -11,7 +11,7 @@ author:
   - name        : Jenna Scherger
     affiliation : "3"
   - name        : Sabrina St-Pierre
-    affiliation : ""
+    affiliation : "4"
 
 affiliation:
   - id          : 1
@@ -20,8 +20,8 @@ affiliation:
     institution : University of British Columbia Vancouver
   - id          : 3
     institution : University of British Columbia Okanagan 
-  - id          :
-    institution :
+  - id          : 4
+    institution : Université de Montréal
 
 output: prereg::cos_prereg
 bibliography: references.bib
@@ -106,7 +106,7 @@ Variable data will be collected within the study area of south-central Sweden. D
 
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 ```
-## Statistical models 
+## Statistical models
 
 ```{=html}
 <!-- What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, multiple regression, SEM, etc) and the specification of the model (this includes each variable that will be included as predictors, outcomes, or covariates). Please specify any interactions, subgroup analyses, pairwise or complex contrasts, or follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Remember that any test not included here must be noted as an exploratory test in your final article.
