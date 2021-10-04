@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  1 OCT 2021 10:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  1 OCT 2021 17:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -573,10 +573,6 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 233.
-
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -589,8 +585,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
 [2]
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 237.
+
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-63.
+60.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -605,7 +605,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 328.
+(hyperref)                be the same. Added a new anchor on input line 326.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -618,20 +618,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 353.
+(hyperref)                be the same. Added a new anchor on input line 352.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 361.
+(hyperref)                be the same. Added a new anchor on input line 360.
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 408--413
+Underfull \hbox (badness 1275) in paragraph at lines 407--412
  [][]\T1/lmr/m/n/10 (+20) Ripple, W. J., & Beschta, R. L. (2004). Wolves and th
 e ecol-ogy of fear: Can pre-
  []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 408--413
+Underfull \hbox (badness 3098) in paragraph at lines 407--412
  \T1/lmr/m/n/10 (+20) da-tion risk struc-ture ecosys-tems? \T1/lmr/m/it/10 (+20
 ) Bio-Science\T1/lmr/m/n/10 (+20) , \T1/lmr/m/it/10 (+20) 54\T1/lmr/m/n/10 (+20
 ) (8), 755--766. doi:[][]10.1641/0006-
@@ -656,16 +656,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6] (./Group_8_PreReg.aux)
 Package rerunfilecheck Info: File `Group_8_PreReg.out' has not changed.
-(rerunfilecheck)             Checksum: DCA580646C50599236B857DFF2A25092;1910.
+(rerunfilecheck)             Checksum: 9E8111E17067A45853F518E45402BEE4;2115.
  ) 
 Here is how much of TeX's memory you used:
- 12136 strings out of 478994
- 181031 string characters out of 5858184
- 516564 words of memory out of 5000000
- 29257 multiletter control sequences out of 15000+600000
- 450587 words of font info for 109 fonts, out of 8000000 for 9000
+ 12132 strings out of 478994
+ 181089 string characters out of 5858184
+ 516630 words of memory out of 5000000
+ 29256 multiletter control sequences out of 15000+600000
+ 450410 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,74p,268b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,74p,354b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist
@@ -676,10 +676,10 @@ fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Group_8_PreReg.pdf (6 pages, 232661 bytes).
+Output written on Group_8_PreReg.pdf (6 pages, 231912 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
- 26761 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 181 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 26753 words of extra memory for PDF output out of 29859 (max. 10000000)
 
