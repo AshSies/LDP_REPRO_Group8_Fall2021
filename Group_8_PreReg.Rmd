@@ -1,5 +1,5 @@
 ---
-title           : "The effects of wolves on moose presence and abundance in central Sweden."
+title           : "The effects of wolves on moose presence and abundance in south-central Sweden."
 shorttitle      : "Effects of wolves on moose presence"
 date            : "Oct 6, 2021"
 
@@ -43,11 +43,13 @@ Example: Effect of sugar on brownie tastiness. -->
 
 Example: Though there is strong evidence to suggest that sugar affects taste preferences, the effect has never been demonstrated in brownies. Therefore, we will measure taste preference for four different levels of sugar concentration in a standard brownie recipe to determine if the effect exists in this pastry. -->
 ```
-Predator-prey interactions often have strong effects on the lower trophic levels in a given environment. For example, upon the re-establishment of wolves in a national park in North America, aspen trees saw markedly increased recruitment [@ripple2014]. Apex predator reintroduction is often considered to benefit ecosystems by limiting the consumption of lower trophic levels by grazers, and by providing meals for scavengers [@ripple2004]. However, most research on the effects of predator reintroduction has been conducted in natural areas minimally affected by human activities [@kuijper2016]. Due to climate-driven relocation and controlled reintroduction programs, modern and future predator populations may become established in areas of strong anthropogenic influence. Thus, when predicting future effects of predators, it is important to conduct research in areas with nearby human activity, to discern how it may affect predator-prey interactions [@kuijper2016].
+Predator-prey interactions often have strong effects on lower trophic levels in a given environment. For example, upon the re-establishment of wolves in a national park in North America, aspen trees saw markedly increased recruitment [@ripple2014]. In general, apex predator reintroduction is often considered to benefit ecosystems by limiting grazer populations and their consumption of lower trophic levels, and by providing meals for scavengers [@ripple2004].
 
-Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. By surveying moose pellets, @ausilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021].
+To date, most research on the effects of predator reintroduction has been conducted in natural areas minimally affected by human activities [@kuijper2016]. However, due to climate-driven relocation and controlled reintroduction programs, modern and future predator populations may become established in areas of strong anthropogenic influence [@kuijper2016]. Consequently, when hoping to predict the effects of future predator reintroduction events, it is important to study areas with nearby human activity.
 
-Future populations of predators will continue to establish themselves in areas of anthropogenic influence. It is important to critically investigate the effects that they may, or may not, have on prey populations and lower trophic levels in these areas. To increase certainty in their paradigm-questioning results, we will replicate @ausilio2021's research, conducting parallel analyses on areas that are just north of the original study area.
+Recent studies in Sweden have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. By surveying moose pellets, @ausilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021].
+
+Future populations of predators will continue to establish themselves in areas of anthropogenic influence. It is important to critically investigate the effects that they may, or may not, have on prey populations and lower trophic levels in these areas. To increase certainty in their paradigm-questioning results, we will replicate @ausilio2021's research, conducting parallel analyses on the original study area over subsequent years, and asking whether or not wolves affect moose presence and abundance.
 
 ## Hypotheses
 
@@ -66,7 +68,7 @@ We hypothesize that:
 
 ## Study type and design
 
-The study type is a replication of the original paper by Ausilio et al. entitled *Ecological Effects of Wolves on Anthropogenic Landscapes: The Potential for Trophic Cascades is Context-Dependent*.
+This study is a replication of original research by Ausilio et al., described in *Ecological Effects of Wolves on Anthropogenic Landscapes: The Potential for Trophic Cascades is Context-Dependent* [@ausilio2021].
 
 ```{=html}
 <!-- Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies.
@@ -75,9 +77,7 @@ This question has a variety of possible answers. The key is for a researcher to 
 
 Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
 ```
-*Our proposed study maybe could be classified as two-group, between-subjects study with repeated measures? I.e. plots where wolves are established and plots where wolves are not established are observed (via moose pellet counts) over time?* Unsure on this..
-
-Upon further research I think this study would be better-classified as **a regression analysis**. The data we will use could be classified as secondary data (i.e. we did not collect it specifically for this study). We could add a short description of our predictor/response variables and direct readers to more thorough definitions below.
+Our hypotheses will be tested using a form of regression analysis. Data on 6 predictor variables and one response variable will be collected. Through modelling, we will predict the influence that the predictor variables have on both a) moose presence, and b) moose abundance. Both outcomes will be informed by response variable values.
 
 ## Data collection
 
