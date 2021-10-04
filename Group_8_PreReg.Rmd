@@ -1,7 +1,7 @@
 ---
-title           : "My preregistration for the COS Preregistration Challenge"
-shorttitle      : "My preregistration"
-date            : "October 6, 2021"
+title           : "The effects of wolves on moose presence and abundance in central Sweden."
+shorttitle      : "Effects of wolves on moose presence"
+date            : "Oct 6, 2021"
 
 author: 
   - name        : Ashton Sies
@@ -9,16 +9,25 @@ author:
   - name        : Emma Nikkel
     affiliation : "2"
   - name        : Jenna Scherger
+<<<<<<< HEAD
     affiliation : "3"
+=======
+    affiliation : ""
+>>>>>>> ef0c7bce14021de9f53f80ab65cf6ff285a04c99
   - name        : Sabrina St-Pierre
     affiliation : ""
 
 affiliation:
   - id          : 1
-    institution : Wilhelm-Wundt-University
+    institution : University of Regina
   - id          : 2
+<<<<<<< HEAD
     institution : Konstanz Business School
   - id          : 3
+=======
+    institution : University of British Columbia
+  - id          :
+>>>>>>> ef0c7bce14021de9f53f80ab65cf6ff285a04c99
     institution :
 
 output: prereg::cos_prereg
@@ -34,7 +43,7 @@ bibliography: references.bib
 
 Example: Effect of sugar on brownie tastiness. -->
 ```
-`r rmarkdown::metadata$title` The effects of wolves on moose presence and abundance in central Sweden.
+`r rmarkdown::metadata$title`
 
 ## Description
 
@@ -45,7 +54,7 @@ Example: Though there is strong evidence to suggest that sugar affects taste pre
 ```
 Predator-prey interactions often have strong effects on the lower trophic levels in a given environment. For example, upon the re-establishment of wolves in a national park in North America, aspen trees saw markedly increased recruitment [@ripple2014]. Apex predator reintroduction is often considered to benefit ecosystems by limiting the consumption of lower trophic levels by grazers, and by providing meals for scavengers [@ripple2004]. However, most research on the effects of predator reintroduction has been conducted in natural areas minimally affected by human activities [@kuijper2016]. Due to climate-driven relocation and controlled reintroduction programs, modern and future predator populations may become established in areas of strong anthropogenic influence. Thus, when predicting future effects of predators, it is important to conduct research in areas with nearby human activity, to discern how it may affect predator-prey interactions [@kuijper2016].
 
-Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. By surveying moose pellets, @auilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021].
+Recent studies in Europe have found that wolf reintroduction does not impart biodiversity benefits to lower trophic levels, contrasting observations made in American National Parks. For example, @gicquel2020 reported that wolf reintroduction slightly increased moose browsing damage to Scots Pine trees in Sweden, as did @ausilio2021. By surveying moose pellets, @ausilio2021 also found that wolf presence and wolf territory establishment had slightly positive effects on moose presence and abundance. Other factors, including distance from roads (an indirect measure of human activities), had much stronger effects on moose populations than wolves [@ausilio2021].
 
 Future populations of predators will continue to establish themselves in areas of anthropogenic influence. It is important to critically investigate the effects that they may, or may not, have on prey populations and lower trophic levels in these areas. To increase certainty in their paradigm-questioning results, we will replicate @ausilio2021's research, conducting parallel analyses on areas that are just north of the original study area.
 
@@ -64,11 +73,9 @@ We hypothesize that:
 
 # Design Plan
 
-## Study type
+## Study type and design
 
 The study type is a replication of the original paper by Ausilio et al. entitled *Ecological Effects of Wolves on Anthropogenic Landscapes: The Potential for Trophic Cascades is Context-Dependent*.
-
-## Study design
 
 ```{=html}
 <!-- Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies.
@@ -79,33 +86,23 @@ Example: We have a between subjects design with 1 factor (sugar by mass) with 4 
 ```
 *Our proposed study maybe could be classified as two-group, between-subjects study with repeated measures? I.e. plots where wolves are established and plots where wolves are not established are observed (via moose pellet counts) over time?* Unsure on this..
 
+Upon further research I think this study would be better-classified as **a regression analysis**. The data we will use could be classified as secondary data (i.e. we did not collect it specifically for this study). We could add a short description of our predictor/response variables and direct readers to more thorough definitions below.
+
 ## Data collection
 
 The study will be conducted using data retrieved from various government and private sector institutions (Table 1) between 2003 and 2016, as is consistent with the original study by Ausilio et al. The study area will be the northern range of south-central Sweden's breeding range of wolves, distinct from the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
 
-# Variables
+## Variables
 
-Variable data will be collected within the study area of south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible.
+Variable data will be collected within the study area of south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible. Seven variables will be use in statistical analysis of the effect of wolves on the presence and abundance of moose.
 
-Table 1. Description and data source of variables to be used in statistical analysis of the effect of wolves on the presence and abundance of moose.
-
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| **Variable**                             | **Description**                                                                                                                                                                                                                                      | **Data source**                                                          |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Moose pellet counts                      | Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014].                                                  | Swedish National Forestry Inventory                                      |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Forest age stage (4 categories)          | Moose pellet count surveys are conducted in 4 forest habitats: clear-cut, young, thinned, and mature.                                                                                                                                                | Swedish National Forestry Inventory                                      |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Pine proportion                          | Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability.  | Swedish National Forestry Inventory                                      |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Distance to the nearest forest road (km) | Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape.                                                                             | Swedish national road database from the Swedish Transport Administration |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Distance to the nearest main road (km)   | Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape.                                                                               | Swedish national road database from the Swedish Transport Administration |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Wolf presence                            | Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius was used based on the average wolf territory size in Scandinavia [@liberg2011]. | National wolf-monitoring system from County Administrative Boards        |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
-| Time since wolf territory establishment  | A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys.                                                                                                                                              | National wolf-monitoring system from County Administrative Boards        |
-+------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------+
+1)  *Moose pellet counts:* Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014]. The data source for this variable is the Swedish National Forest Inventory.
+2)  *Forest age stages:* There are four forest age stages considered when moose pellet count surveys are conducted. These stages classified as clear-cut, young, thinned, and mature. The data source for this variable is the Swedish National Forest Inventory.
+3)  *Pine proportion:* Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability. The data source for this variable is the Swedish National Forest Inventory.
+4)  *Distance to the nearest forest road (km):* Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+5)  *Distance to the nearest main road (km):* Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+6)  *Wolf presence:* Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius will be used based on the average wolf territory size in Scandinavia [@liberg2011]. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
+7)  *Time since wolf territory establishment:* A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
 
 # Analysis Plan
 
@@ -114,7 +111,7 @@ Table 1. Description and data source of variables to be used in statistical anal
 
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 ```
-## Statistical models
+## Statistical models - Sabrina/Jenna
 
 ```{=html}
 <!-- What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, multiple regression, SEM, etc) and the specification of the model (this includes each variable that will be included as predictors, outcomes, or covariates). Please specify any interactions, subgroup analyses, pairwise or complex contrasts, or follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Remember that any test not included here must be noted as an exploratory test in your final article.
@@ -128,7 +125,7 @@ Example:  We will use a one-way between subjects ANOVA to analyze our results. T
 ```
 Enter your response here.
 
-## Transformations
+## Transformations - Sabrina/Jenna
 
 ```{=html}
 <!-- If you plan on transforming, centering, recoding the data, or will require a coding scheme for categorical variables, please describe that process. If any categorical predictors are included in a regression, indicate how those variables will be coded (e.g. dummy coding, summation coding, etc.) and what the reference category will be.
@@ -137,7 +134,7 @@ Example: The "Effect of sugar on brownie tastiness" does not require any additio
 ```
 Enter your response here.
 
-## Inference criteria
+The original authors describe a few data transformations in their methods, like standardizing continuous predictors. We could propose we do the same, and offer the same reasoning (eliminating collinearity and improving interpretability). Could propose that we will test VIF / tolerance values, as the original authors did.
 
 ```{=html}
 <!-- What criteria will you use to make inferences? Please describe the information youÍll use (e.g. p-values, bayes factors, specific model fit indices), as well as cut-off criterion, where appropriate. Will you be using one or two tailed tests for each of your analyses? If you are comparing multiple conditions or testing multiple hypotheses, will you account for this?
@@ -146,7 +143,7 @@ p-values, confidence intervals, and effect sizes are standard means for making a
 
 Example: We will use the standard p<.05 criteria for determining if the ANOVA and the post hoc test suggest that the results are significantly different from those expected if the null hypothesis were correct. The post-hoc Tukey-Kramer test adjusts for multiple comparisons. -->
 ```
-## Exploratory analyses (optional)
+## Exploratory analyses (optional) - Sabrina/Jenna
 
 ```{=html}
 <!-- If you plan to explore your data set to look for unexpected differences or relationships, you may describe those tests here. An exploratory test is any test where a prediction is not made up front, or there are multiple possible tests that you are going to use. A statistically significant finding in an exploratory test is a great way to form a new confirmatory hypothesis, which could be registered at a later time.
