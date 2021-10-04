@@ -330,6 +330,14 @@ plot(Pellet.counts ~ Pine.proportion,
 
 ##==================================================================================
 
+# Check how many zeros in the response variable
+zifo_test <- nrow(moose_simulated %>% dplyr::filter(Pellet.counts == 0))/nrow(moose_simulated)*100
+zifo_test # 90.68% of data is = 0
+
+hist(moose_simulated$Pellet.counts,
+     main = "Zero Inflation Visual",
+     xlab = "Pellet Counts")
+
 
 ## Running Model:
 # Formula for zero inflation:
