@@ -269,6 +269,19 @@ hist(moose_simulated$Time.since.establishment,
 ## Done simulations
 
 
+names(moose_simulated)
+# Check correlation between predictors:
+preds <- moose_simulated %>%
+  dplyr::select(-c(Pellet.counts, Pine.proportion.100))
+head(preds)
+
+par(mfrow=c(1,1))
+preds_cor <- cor(preds)
+head(round(preds_cor, 2))
+corrplot::corrplot(preds_cor, method = "color", addCoef.col="black", order = "AOE", tl.cex = 0.75, number.cex = 0.4)
+# no pairings >= 0.6
+
+
 ##==================================================================================
 
 ## Exploratory Analyses of Simulated Data
