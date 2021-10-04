@@ -85,7 +85,7 @@ Our hypotheses will be tested using a form of regression analysis. Data on 6 pre
 
 ## Data collection
 
-The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km² range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
+The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km² range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. To replicate the original study as closely as possible, approximately 10,350 circular sample plots (area = 38 m²) will be surveyed, with the number sampled per year dependent on data availability.
 
 ## Variables
 
@@ -120,17 +120,6 @@ Example:  We will use a one-way between subjects ANOVA to analyze our results. T
 ```
 The response variable was over-dispersed and had a large number of zeros (90.68%), therefore we used a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) was set as a random effect.
 
-## Transformations - Sabrina/Jenna
-
-```{=html}
-<!-- If you plan on transforming, centering, recoding the data, or will require a coding scheme for categorical variables, please describe that process. If any categorical predictors are included in a regression, indicate how those variables will be coded (e.g. dummy coding, summation coding, etc.) and what the reference category will be.
-
-Example: The "Effect of sugar on brownie tastiness" does not require any additional transformations. However, if it were using a regression analysis and each level of sweet had been categorically described (e.g. not sweet, somewhat sweet, sweet, and very sweet), 'sweet' could be dummy coded with 'not sweet' as the reference category. -->
-```
-Enter your response here.
-
-The original authors describe a few data transformations in their methods, like standardizing continuous predictors. We could propose we do the same, and offer the same reasoning (eliminating collinearity and improving interpretability). Could propose that we will test VIF / tolerance values, as the original authors did.
-
 ```{=html}
 <!-- What criteria will you use to make inferences? Please describe the information youÍll use (e.g. p-values, bayes factors, specific model fit indices), as well as cut-off criterion, where appropriate. Will you be using one or two tailed tests for each of your analyses? If you are comparing multiple conditions or testing multiple hypotheses, will you account for this?
 
@@ -145,14 +134,6 @@ Example: We will use the standard p<.05 criteria for determining if the ANOVA an
 
 Example: We expect that certain demographic traits may be related to taste preferences. Therefore, we will look for relationships between demographic variables (age, gender, income, and marital status) and the primary outcome measures of taste preferences. -->
 ```
-Enter your response here.
-
-# Other
-
-## Other (Optional)
-
-<!-- If there is any additional information that you feel needs to be included in your preregistration, please enter it here. Literature cited, disclosures of any related work such as replications or work that uses the same data, or other context that will be helpful for future readers would be appropriate here. -->
-
 Enter your response here.
 
 # References
