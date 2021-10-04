@@ -106,7 +106,7 @@ Variable data will be collected within the study area of south-central Sweden. D
 
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 ```
-## Statistical models
+## Statistical models - should add criteria for inferences
 
 ```{=html}
 <!-- What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, multiple regression, SEM, etc) and the specification of the model (this includes each variable that will be included as predictors, outcomes, or covariates). Please specify any interactions, subgroup analyses, pairwise or complex contrasts, or follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Remember that any test not included here must be noted as an exploratory test in your final article.
@@ -118,7 +118,9 @@ This is perhaps the most important and most complicated question within the prer
 
 Example:  We will use a one-way between subjects ANOVA to analyze our results. The manipulated, categorical independent variable is 'sugar' whereas the dependent variable is our taste index. -->
 ```
-The response variable was over-dispersed and had a large number of zeros (90.68%), therefore we used a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) was set as a random effect.
+In the original data [@ausilio2021], the response variable was over-dispersed and had a large number of zeros (90.68%). We anticipate that we will collect similar data, and thus we plan to use a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) is set as a random effect. To validate our data analysis procedures, we ran our scripts using simulated data (Figure 1).
+
+![A simulated prediction of moose pellet counts in relation to (A) distance from main roads, (B) distance from forest roads, (C) wolf territory, (D) time since wold establishment, (E) forest stage, (F) pine proportion, and (G) the interaction between forest class and wolf territory. All predictor variable data were simulated, and simulation procedures were informed by the original study's data deposited by Ausilio et al (2021). Lines in plots (A), (B), (D), and (F) represent fitted values and standard errors.](Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.png)
 
 ```{=html}
 <!-- What criteria will you use to make inferences? Please describe the information youÍll use (e.g. p-values, bayes factors, specific model fit indices), as well as cut-off criterion, where appropriate. Will you be using one or two tailed tests for each of your analyses? If you are comparing multiple conditions or testing multiple hypotheses, will you account for this?
@@ -136,7 +138,7 @@ Example: We expect that certain demographic traits may be related to taste prefe
 ```
 Enter your response here.
 
-# References
+# References - We have different citations for the original paper currently
 
 ## 
 
