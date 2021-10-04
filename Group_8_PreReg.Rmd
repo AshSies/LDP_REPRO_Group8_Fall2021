@@ -83,7 +83,7 @@ Our hypotheses will be tested using a form of regression analysis. Data on 6 pre
 
 ## Data collection
 
-The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
+The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km² range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. (number of surveyed plots??)
 
 ## Variables
 
@@ -116,9 +116,7 @@ This is perhaps the most important and most complicated question within the prer
 
 Example:  We will use a one-way between subjects ANOVA to analyze our results. The manipulated, categorical independent variable is 'sugar' whereas the dependent variable is our taste index. -->
 ```
-The response variable was over-dispersed and had a large number of zeros (90.68%), therefore we used a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) was set as a random effect. 
-
-
+The response variable was over-dispersed and had a large number of zeros (90.68%), therefore we used a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) was set as a random effect.
 
 ## Transformations - Sabrina/Jenna
 
