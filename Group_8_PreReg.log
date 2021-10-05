@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  4 OCT 2021 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  5 OCT 2021 10:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -635,16 +635,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 348.
+(hyperref)                be the same. Added a new anchor on input line 352.
 
-<Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.png, id=95, 2889.79625pt x
- 1805.74625pt>
-File: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.png Graphic file (typ
-e png)
-<use Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.png>
-Package pdftex.def Info: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.pn
-g  used on input line 368.
-(pdftex.def)             Requested size: 343.27711pt x 214.50348pt.
+<Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png, id=94
+, 1457.445pt x 1794.705pt>
+File: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png G
+raphic file (type png)
+<use Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png>
+Package pdftex.def Info: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_re
+sized_05Oct21.png  used on input line 393.
+(pdftex.def)             Requested size: 347.03633pt x 427.34227pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -653,19 +653,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[5 <./Plots/mooseabundance_marginaleffects_03Oct21_sjPlot.png>]
+[5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.0pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.0pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
+
+[6 <./Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png>]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 387.
+(hyperref)                be the same. Added a new anchor on input line 422.
 
 
-Underfull \hbox (badness 1275) in paragraph at lines 434--439
+Underfull \hbox (badness 1275) in paragraph at lines 469--474
  [][]\T1/lmr/m/n/10 (+20) Ripple, W. J., & Beschta, R. L. (2004). Wolves and th
 e ecol-ogy of fear: Can pre-
  []
 
 
-Underfull \hbox (badness 3098) in paragraph at lines 434--439
+Underfull \hbox (badness 3098) in paragraph at lines 469--474
  \T1/lmr/m/n/10 (+20) da-tion risk struc-ture ecosys-tems? \T1/lmr/m/it/10 (+20
 ) Bio-Science\T1/lmr/m/n/10 (+20) , \T1/lmr/m/it/10 (+20) 54\T1/lmr/m/n/10 (+20
 ) (8), 755--766. doi:[][]10.1641/0006-
@@ -679,7 +688,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[6]
+[7]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -688,18 +697,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[7] (./Group_8_PreReg.aux)
+[8] (./Group_8_PreReg.aux)
 Package rerunfilecheck Info: File `Group_8_PreReg.out' has not changed.
-(rerunfilecheck)             Checksum: EBFA64E122DACE5C9C47A05BFCE42E1D;1998.
+(rerunfilecheck)             Checksum: D4E426B0689BBDFDA7A694047831A39F;2041.
  ) 
 Here is how much of TeX's memory you used:
- 12438 strings out of 478994
- 186100 string characters out of 5858184
- 520427 words of memory out of 5000000
+ 12447 strings out of 478994
+ 186302 string characters out of 5858184
+ 520435 words of memory out of 5000000
  29535 multiletter control sequences out of 15000+600000
- 450605 words of font info for 111 fonts, out of 8000000 for 9000
+ 450951 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,74p,509b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,11n,74p,529b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist
@@ -710,10 +719,10 @@ fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Group_8_PreReg.pdf (7 pages, 452546 bytes).
+Output written on Group_8_PreReg.pdf (8 pages, 591497 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 157 compressed objects within 2 object streams
- 45 named destinations out of 1000 (max. 500000)
+ 183 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
  26734 words of extra memory for PDF output out of 29859 (max. 10000000)
 
