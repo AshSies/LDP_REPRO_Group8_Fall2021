@@ -20,7 +20,6 @@ library(ggpubr) # for arranging multiple plots into 1 figure
 # https://datadryad.org/stash/share/svRCeH_hvPZVH2UjmzWQOvErl-B6deccaKMXgGEeHtM
 
 # Set working directory:===========================================================
-#setwd("C:/Users/sabri/OneDrive/Documents/BackUp/Living Data Project/Productivity/Assignements/Reproductibility/doi_10.5061_dryad.5hqbzkh37__v2")
 setwd("/Users/jennascherger/Desktop/MSc/Courses/NSERC_CREATE/01_Productivity_Reproducibility/Assignments/02_Reproducible_Research/LDP_REPRO_Group8_Fall2021")
 
 # Read in data:===================================================================
@@ -215,8 +214,8 @@ set.seed(5)
 
 ## Simulate the data
 # Determination the pre-required variables for the function
-# Adjusting the data
-# ADD DETAIL WHY (SABRINA)
+# Adjusting the data : Since the zero-inflated negative binomial model is made for discontinuous data,
+# we adjust the raw data so the returned values are more adequate.
 moose_simulated$Pine_raw_100 <- (moose_raw$Pine_proportion)*100
 
 # zprob : probability of structural zeros
