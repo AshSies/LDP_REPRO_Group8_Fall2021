@@ -222,32 +222,32 @@ sjPlot::set_theme(
 
 # A. Main Roads:
 Plot_abu_mainroads <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Big"),
-                                         axis.title = c("Distance main roads [km]", "Moose pellet counts"), 
+                                         axis.title = c("Distance main roads [km]", "Moose Abundance"), 
                                          title = "") 
 
 Plot_abu_mainroads + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 # B. Forest Roads:
 Plot_abu_forestroads <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Small"),
-                                           axis.title = c("Distance forest roads [km]", "Moose pellet counts"), 
+                                           axis.title = c("Distance forest roads [km]", "Moose Abundance"), 
                                            title = "")
 Plot_abu_forestroads + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 # C. Wolf Territory:
 Plot_abu_wolfterritory <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Wolf.territory"),
-                                             axis.title = c("Wolf Territory", "Moose pellet counts"), 
+                                             axis.title = c("Wolf Territory", "Moose Abundance"), 
                                              title = "")
 Plot_abu_wolfterritory + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 # D. Forest Stage:
 Plot_abu_foreststage <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Forest_class"),
-                                           axis.title = c("Forest Stage", "Moose pellet counts"), 
+                                           axis.title = c("Forest Stage", "Moose Abundance"), 
                                            title = "")
 Plot_abu_foreststage + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 # E. Pine Proportion:
 Plot_abu_pineproportion <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Pine.proportion"),
-                                              axis.title = c("Pine proportion", "Moose pellet counts"), 
+                                              axis.title = c("Pine proportion", "Moose Abundance"), 
                                               title = "",
                                               base_family = "Arial Narrow")
 Plot_abu_pineproportion + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
@@ -255,14 +255,14 @@ Plot_abu_pineproportion + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20
 
 # F. Time Since Wolf Establishment:
 Plot_abu_tse <- sjPlot::plot_model(topmodel, type= "pred", terms = ("Time.since.establishment"),
-                                   axis.title = c("Time Since Establishment", "Moose pellet counts"), 
+                                   axis.title = c("Time Since Establishment", "Moose Abundance"), 
                                    title = "",
                                    base_family = "Arial Narrow")
 Plot_abu_tse + sjPlot::font_size(axis_title.x = 20, axis_title.y = 20, labels.x = 20, labels.y = 20, title = 15)
 
 # G. Interaction Term - Wolf Territory:Forest Stage
 Plot_abu_int <- sjPlot::plot_model(topmodel, type= "int",
-                                   axis.title = c("Wolf Territory", "Moose pellet counts"),
+                                   axis.title = c("Wolf Territory", "Moose Abundance"),
                                    legend.title = "Forest Class",
                                    title = "",
                                    base_family = "Arial Narrow")
