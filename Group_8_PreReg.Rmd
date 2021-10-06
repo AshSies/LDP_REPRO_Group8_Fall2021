@@ -135,7 +135,7 @@ Example: We will use the standard p<.05 criteria for determining if the ANOVA an
 ```
 ## Exploratory analyses
 
-We first investigated the simulated data by plotting the predictor variables of interest as a function of moose pellets to determine predictor variability and general trends within the data.
+We first investigated our simulated data by plotting the predictor variables of interest as a function of moose pellets to determine predictor variability and general trends within the data. We intend to conduct similar investigative, cursory analyses with our real data, once we collect it.
 
 In addition to assessing the impacts of wolf presence and time since wolf territory establishment, we will determine if other predictor variables related to the forest environment and the level of human activity impact moose presence and abundance. Data for these predictor variables (variables 2-6 in the 'Variables' section above) are included in our models and their effects are included in our output (Figure 1).
 
