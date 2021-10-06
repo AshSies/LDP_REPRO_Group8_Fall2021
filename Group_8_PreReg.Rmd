@@ -66,8 +66,6 @@ We hypothesize that:
 
 2)  Time since wolf territory establishment will positively effect probability of moose presence, and overall moose abundance.
 
-3)  'Distance from roads' will effect moose presence and abundance more strongly than wolf presence or time since wolf territory establishment.
-
 # Design Plan
 
 ## Study type and design
@@ -81,23 +79,24 @@ This question has a variety of possible answers. The key is for a researcher to 
 
 Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
 ```
-Our hypotheses will be tested using a form of regression analysis. Data on 6 predictor variables and one response variable will be collected. Through modelling, we will predict the influence that the predictor variables have on both a) moose presence, and b) moose abundance. Both outcomes will be informed by the response variable: moose pellet counts.
+Our hypotheses will be tested using a form of regression analysis. Data on 7 predictor variables and one response variable will be collected. Through modelling, we will predict the influence that the predictor variables have on both a) moose presence, and b) moose abundance. Both outcomes will be informed by the response variable: moose pellet counts.
 
 ## Data collection
 
-The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km² range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. The sample size will be determined by the data available within the study region. To replicate the original study as closely as possible, approximately 10,350 circular sample plots (area = 38 m²) will be surveyed, with the number sampled per year dependent on data availability.
+The study will be conducted using data retrieved from various government and private sector institutions beginning in 2021 and ending in 2034, to replicate the 13-year original study by Ausilio et al. The study area will be the approximately 100,000 km² range of south-central Sweden's breeding range of wolves, replicating the region assessed in the original study. The predominant trees in this landscape are Scots pine, Norway spruce, and birch. The average moose winter density in the study range is approximately 1.3 per km² [@zimmermann2014]. Variables to be collected include: moose pellet counts, tree cover, roads, and wolf presence and time since wolf territory establishment. To replicate the original study as closely as possible, approximately 10,350 circular sample plots (area = 38 m²) will be surveyed, with the number sampled per year dependent on data availability.
 
 ## Variables
 
-Variable data will be collected within the defined study area in south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible. Seven variables will be used in our statistical analysis: 6 predictor variables and 1 response variable. Determining the effects that variables 6) and 7) below have on variable 1) will reveal the effects of wolves on the presence and abundance of moose. Exploring the effects of other predictor variables on variable 1) will potentially help identify other modulators of moose range and abundance.
+Variable data will be collected within the defined study area in south-central Sweden. Data sources will be consistent with those used in the original study in order to maintain as close a replication study as possible. Seven variables will be used in our statistical analysis: 7 predictor variables and 1 response variable. Determining the effects that variables 7) and 8) below have on variable 1) will reveal the effects of wolves on the presence and abundance of moose. Exploring the effects of other predictor variables on variable 1) will potentially help identify other modulators of moose range and abundance.
 
 1)  *Moose pellet counts:* Moose pellet counts will be used to gather presence and absence data on moose. Yearly surveys are conducted between the months of May and September throughout south-central Sweden [@fridman2014]. The data source for this variable is the Swedish National Forest Inventory.
 2)  *Forest age stages:* There are four forest age stages considered when moose pellet count surveys are conducted. These stages classified as clear-cut, young, thinned, and mature. The data source for this variable is the Swedish National Forest Inventory.
 3)  *Pine proportion:* Sample plots, the same as those used for moose pellet count surveys, will be surveyed to assess tree cover. The cover (m²) of lodgepole pine and Scots pine, as a proportion of all tree cover, will be generated as an index of food availability. The data source for this variable is the Swedish National Forest Inventory.
-4)  *Distance to the nearest forest road (km):* Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
-5)  *Distance to the nearest main road (km):* Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
-6)  *Wolf presence:* Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius will be used based on the average wolf territory size in Scandinavia [@liberg2011]. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
-7)  *Time since wolf territory establishment:* A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
+4)  RAWO
+5)  *Distance to the nearest forest road (km):* Distance (km) between each plot and the nearest forest road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+6)  *Distance to the nearest main road (km):* Distance (km) between each plot and the nearest main road, as classified by the database, will be calculated as a proxy representing human influence on the landscape. The data source for this variable is the Swedish national road database from the Swedish Transport Administration.
+7)  *Wolf presence:* Presence or absence of a wolf territory, as determined by monitoring obtained by snow tracking, DNA-samples, and GPS locations of collared wolves. A buffered radius will be used based on the average wolf territory size in Scandinavia [@liberg2011]. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
+8)  *Time since wolf territory establishment:* A continuous range from 1 year to 27 years since establishment, as noted by annually conducted surveys. The data source for this variable is the National wolf-monitoring system from County Administrative Boards.
 
 # Analysis Plan
 
@@ -106,7 +105,7 @@ Variable data will be collected within the defined study area in south-central S
 
 A confirmatory analysis plan must state up front which variables are predictors (independent) and which are the outcomes (dependent), otherwise it is an exploratory analysis. You are allowed to describe any exploratory work here, but a clear confirmatory analysis is required. -->
 ```
-## Statistical models - should add criteria for inferences
+## Statistical models
 
 ```{=html}
 <!-- What statistical model will you use to test each hypothesis? Please include the type of model (e.g. ANOVA, multiple regression, SEM, etc) and the specification of the model (this includes each variable that will be included as predictors, outcomes, or covariates). Please specify any interactions, subgroup analyses, pairwise or complex contrasts, or follow-up tests from omnibus tests. If you plan on using any positive controls, negative controls, or manipulation checks you may mention that here. Remember that any test not included here must be noted as an exploratory test in your final article.
@@ -118,7 +117,7 @@ This is perhaps the most important and most complicated question within the prer
 
 Example:  We will use a one-way between subjects ANOVA to analyze our results. The manipulated, categorical independent variable is 'sugar' whereas the dependent variable is our taste index. -->
 ```
-In the original data [@ausilio2021], the response variable was over-dispersed and had a large number of zeros (90.68%). We anticipate that we will collect similar data, and thus we plan to use a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) is set as a random effect. The zero-inflated component of the model included moose presence (pellet count - binary variable) as a function of three predictor variables: distance to main roads, distance to forest roads, and pine proportion. The conditional component of the model included moose abundance (pellet counts - continuous variable) as a function of eight predictor variables: distance to main roads, distance to forest roads, pine proportion, wolf presence, time since wolf establishment, RASE presence, forest stage, and an interaction term between forest stage and wolf presence.
+In the simulated data, the response variable was over-dispersed and had a large number of zeros (90.68%). We anticipate that we will collect similar data, and thus we plan to use a zero inflated negative binomial and hurdle model to investigate the effect of wolves and roads on moose. Hurdle models are composed of two components - zero inflated and conditional. The zero-inflated component runs a generalized linear mixed model (GLMM) with a binomial distribution and logit link using moose pellet presence/absence as the response variable. The conditional component of hurdle modelling runs a GLMM with truncated negative binomial distribution and log link using moose pellets (n\>=1) as the response variable. For both the zero-inflated and conditional components of the hurdle model, TAXAR (year) is set as a random effect. The zero-inflated component of the model included moose presence (pellet count - binary variable) as a function of three predictor variables: distance to main roads, distance to forest roads, and pine proportion. The conditional component of the model included moose abundance (pellet counts - continuous variable) as a function of eight predictor variables: distance to main roads, distance to forest roads, pine proportion, wolf presence, time since wolf establishment, RASE presence, forest stage, and an interaction term between forest stage and wolf presence.
 
 To address the issue of colinearity between continuous predictor variables, a correlation matrix was calculated using Pearson's correlation coefficient 'r' \>= 0.6 (Zuur et al. 2010). The correlation matrix showed there was very low to no correlation between predictor variables. To find the most parsimonious model, models were compared using small-sample-size corrected Akaike Information Criterion (AIC), deltaAIC, and AIC weights from the dredge function in the "MuMin" package (Barton and Barton, 2019). Model averaging was performed using all models with a deltaAIC \< 2 to generate model averaged parameter estimates. To validate our data analysis procedures, we ran our scripts using simulated data (Figure 1).
 
@@ -148,7 +147,7 @@ Discuss exploratory analyses on non-wolf variables here?
 
 Example: We expect that certain demographic traits may be related to taste preferences. Therefore, we will look for relationships between demographic variables (age, gender, income, and marital status) and the primary outcome measures of taste preferences. -->
 ```
-# References - We have different in-text citations for the original paper currently
+# References
 
 ## 
 
