@@ -25,6 +25,7 @@ affiliation:
 
 output: prereg::cos_prereg
 bibliography: references.bib
+csl: apa.csl 
 ---
 
 # Study Information
