@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  5 OCT 2021 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  5 OCT 2021 22:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,7 +611,7 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 249.
 
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-68.
+69.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -635,16 +635,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 350.
+(hyperref)                be the same. Added a new anchor on input line 352.
 
-<Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png, id=93
-, 1457.445pt x 1794.705pt>
-File: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png G
-raphic file (type png)
-<use Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png>
-Package pdftex.def Info: Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_re
-sized_05Oct21.png  used on input line 388.
-(pdftex.def)             Requested size: 347.03633pt x 427.34227pt.
+<Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png, id=93, 1457.445pt x 17
+94.705pt>
+File: Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png Graphic file (type
+ png)
+<use Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png>
+Package pdftex.def Info: Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png
+  used on input line 394.
+(pdftex.def)             Requested size: 361.33588pt x 444.95079pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -662,17 +662,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[6 <./Plots/mooseabundance_marginaleffects_03Oct21_sjPlot_resized_05Oct21.png>]
+[6 <./Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png>]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 423.
+(hyperref)                be the same. Added a new anchor on input line 425.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 439.
+(Font)              <10> on input line 441.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 439.
+(Font)              <7> on input line 441.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 439.
+(Font)              <5> on input line 441.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -695,13 +695,13 @@ Package rerunfilecheck Info: File `Group_8_PreReg.out' has not changed.
 (rerunfilecheck)             Checksum: BB6DFC529960F4D5E84BD9D4B2419333;1450.
  ) 
 Here is how much of TeX's memory you used:
- 12518 strings out of 478994
- 187047 string characters out of 5858184
+ 12520 strings out of 478994
+ 186970 string characters out of 5858184
  521327 words of memory out of 5000000
  29570 multiletter control sequences out of 15000+600000
- 464093 words of font info for 142 fonts, out of 8000000 for 9000
+ 464176 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,74p,509b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,74p,505b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist
@@ -712,7 +712,7 @@ fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Group_8_PreReg.pdf (8 pages, 590771 bytes).
+Output written on Group_8_PreReg.pdf (8 pages, 568871 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  167 compressed objects within 2 object streams
