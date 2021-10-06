@@ -24,8 +24,8 @@ affiliation:
     institution : Université de Montréal
 
 output: prereg::cos_prereg
+csl: vancouver.csl
 bibliography: references.bib
-csl: apa.csl 
 ---
 
 # Study Information
