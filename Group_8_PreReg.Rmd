@@ -142,6 +142,12 @@ We also included the interaction term between forest stage and wolf presence in 
 
 Discuss exploratory analyses on non-wolf variables here?
 
+Jenna's citations :
+
+[@zuur2010]
+
+[@barto2020]
+
 ```{=html}
 <!-- If you plan to explore your data set to look for unexpected differences or relationships, you may describe those tests here. An exploratory test is any test where a prediction is not made up front, or there are multiple possible tests that you are going to use. A statistically significant finding in an exploratory test is a great way to form a new confirmatory hypothesis, which could be registered at a later time.
 
