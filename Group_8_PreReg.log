@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  5 OCT 2021 22:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.21)  6 OCT 2021 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -637,12 +637,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (hyperref)                be the same. Added a new anchor on input line 352.
 
-<Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png, id=93, 1457.445pt x 17
+<Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png, id=93, 1457.445pt x 17
 94.705pt>
-File: Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png Graphic file (type
+File: Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png Graphic file (type
  png)
-<use Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png>
-Package pdftex.def Info: Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png
+<use Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png>
+Package pdftex.def Info: Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png
   used on input line 394.
 (pdftex.def)             Requested size: 361.33588pt x 444.95079pt.
 
@@ -662,17 +662,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.0pt}.
 
-[6 <./Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png>]
+[6 <./Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png>]
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 427.
+(hyperref)                be the same. Added a new anchor on input line 431.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 443.
+(Font)              <10> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 443.
+(Font)              <7> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 443.
+(Font)              <5> on input line 447.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.0pt, for example:
@@ -701,7 +701,7 @@ Here is how much of TeX's memory you used:
  29570 multiletter control sequences out of 15000+600000
  464176 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,11n,74p,505b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,12n,74p,506b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local
 /texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2021/
 texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2021/texmf-dist
@@ -712,10 +712,10 @@ fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/
 2021/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Group_8_PreReg.pdf (8 pages, 568945 bytes).
+Output written on Group_8_PreReg.pdf (8 pages, 569169 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 167 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 169 compressed objects within 2 object streams
  48 named destinations out of 1000 (max. 500000)
  32878 words of extra memory for PDF output out of 35830 (max. 10000000)
 

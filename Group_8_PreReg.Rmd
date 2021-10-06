@@ -124,11 +124,9 @@ To address the issue of colinearity between continuous predictor variables, a co
 
 We validated these data analysis procedures using our simulated data (Figure 1).
 
-![Marginal effects plot for predicted moose abundance in relation to (A) distance to main roads (km); (B) distance to forest roads (km); (C) wolf presence; (D) years since wolf territory establishment; (E) forest stage; (F) pine proportion; and (G) the interaction between wolf presence and forest stage. Shaded regions indicate 95% confidence intervals.](Plots/mooseabundance_marginaleffects_FINAL_05Oct21.png)
+![Marginal effects plot for predicted moose abundance in relation to (A) distance to main roads (km); (B) distance to forest roads (km); (C) wolf presence; (D) years since wolf territory establishment; (E) forest stage; (F) pine proportion; and (G) the interaction between wolf presence and forest stage. Shaded regions indicate 95% confidence intervals.](Plots/mooseabundance_marginaleffects_FINAL_06Oct21.png)
 
-We will use the standard p<0.05 criteria for determining if a predictor variable has a significant effect on moose probability or moose abundance.
-
-We will use the standard p<0.05 criteria for determining if a predictor variable has a significant effect on moose probability or moose abundance.
+We will use the standard p\<0.05 criteria for determining if a predictor variable has a significant effect on moose probability or moose abundance.
 
 ```{=html}
 <!-- What criteria will you use to make inferences? Please describe the information youÍll use (e.g. p-values, bayes factors, specific model fit indices), as well as cut-off criterion, where appropriate. Will you be using one or two tailed tests for each of your analyses? If you are comparing multiple conditions or testing multiple hypotheses, will you account for this?
